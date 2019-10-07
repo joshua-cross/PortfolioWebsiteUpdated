@@ -1,7 +1,8 @@
 .intro {
-    border: 1px solid pink;
+    border-bottom: 3px solid #CD2525;
     padding: 150px 110px;
     display: flex;
+    align-items: center;
     .text {
         display: inline-block;
         margin-left: 50px;
@@ -13,6 +14,7 @@
             font-family: "standardTT";
             letter-spacing: -0.7px;
             font-size: 56px;
+            margin-bottom: 5px;
         }
         h2, h3 {
             font-family: "heebo";
@@ -22,6 +24,7 @@
         h2 {
             letter-spacing: 1px;
             font-size: 36px;
+            margin-bottom: 5px;
         }
 
         h3 {
@@ -33,7 +36,7 @@
 
 .image {
     border-radius: 50%;
-    width: 15%;
+    width: 20%;
     border: 1px solid #3A3A3A;
     box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
 }

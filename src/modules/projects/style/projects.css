@@ -1,0 +1,12 @@
+.project {
+  padding: 60px 120px;
+}
+
+.project:nth-child(even) {
+  background-color: #F6F6F6;
+}
+
+.project:nth-child(odd) {
+  background-color: #F3F3F3;
+}
+/*# sourceMappingURL=projects.css.map */

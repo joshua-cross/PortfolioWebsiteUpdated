@@ -1,9 +1,12 @@
 .intro {
-  border: 1px solid pink;
+  border-bottom: 3px solid #CD2525;
   padding: 150px 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .intro .text {
@@ -20,6 +23,7 @@
   font-family: "standardTT";
   letter-spacing: -0.7px;
   font-size: 56px;
+  margin-bottom: 5px;
 }
 
 .intro .text h2, .intro .text h3 {
@@ -30,6 +34,7 @@
 .intro .text h2 {
   letter-spacing: 1px;
   font-size: 36px;
+  margin-bottom: 5px;
 }
 
 .intro .text h3 {
@@ -39,7 +44,7 @@
 
 .image {
   border-radius: 50%;
-  width: 15%;
+  width: 20%;
   border: 1px solid #3A3A3A;
   -webkit-box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);

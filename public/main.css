@@ -26,6 +26,20 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "standardTT";
+  src: url("./fonts/OldStandardTT-Bold.ttf");
+  font-weight: bold;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "standardTT";
+  src: url("./fonts/OldStandardTT-Regular.ttf");
+  font-weight: normal;
+  font-weight: 400;
+}
+
 body, html {
   margin: 0px;
   padding: 0px;

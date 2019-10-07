@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Logo from './logo';
+import Links from './links';
 
 import "./style/bar.css";
 
@@ -22,7 +23,26 @@ class Bar extends React.Component {
         return (
             <div className = "nav">
                 <Logo />
-                <a href = "http://google.com">Google</a>
+                <Links
+                    links = {[
+                        {
+                            name: "GitHub",
+                            hyperlink: "https://github.com/joshua-cross"
+                        },
+                        {
+                            name: "LinkedIn",
+                            hyperlink: "http://linkedin.com"
+                        },
+                        {
+                            name: "Email",
+                            hyperlink: "http://youtube.com"
+                        },
+                        {
+                            name: "CV",
+                            hyperlink: "http://youtube.com"
+                        }
+                    ]}
+                />
             </div>
         );
     }

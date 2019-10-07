@@ -1,0 +1,38 @@
+.logo {
+    border: 3px solid red;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.2s;
+
+    p {
+        font-family: "heebo";
+        padding: 0px;
+        margin: 0px;
+        text-transform: uppercase;
+        text-align: center;
+        transition: color 0.2s;
+    }
+
+    .main-text {
+        font-weight: bolder;
+        font-size: 28px;
+        letter-spacing: -0.7px;
+    }
+
+    .secondary-text {
+        letter-spacing: 1.25px;
+        font-size: 14px;
+        margin-top: -12px;
+    }
+}
+
+.logo:hover {
+    background-color: #CD2525;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    p {
+        color: white;
+    }
+}

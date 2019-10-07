@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Bar from './navigation/bar';
+import Intro from './Introduction/intro';
 
 class App extends React.Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class App extends React.Component {
         return (
             <div className = "container">
                 <Bar />
-                <p>Hello World</p>
+                <Intro />
             </div>
         );
     }

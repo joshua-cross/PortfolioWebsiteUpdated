@@ -12,6 +12,10 @@
           align-items: flex-start;
 }
 
+.project .contents .text {
+  width: 50%;
+}
+
 .project i, .project .icon {
   font-size: 40px;
   color: #A45412;
@@ -70,10 +74,6 @@
   background-color: #F3F3F3;
 }
 
-.text {
-  width: 50%;
-}
-
 .devices {
   width: 50%;
   position: relative;
@@ -94,5 +94,13 @@
   display: block;
   position: relative;
   float: right;
+}
+
+.deviceImage {
+  width: 100%;
+}
+
+.deviceImage img {
+  width: 100%;
 }
 /*# sourceMappingURL=projects.css.map */

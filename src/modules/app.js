@@ -4,7 +4,8 @@ import Bar from './navigation/bar';
 import Intro from './Introduction/intro';
 import Projects from './projects/projects';
 
-
+import fashionify1 from './resources/fashionify-desktop.png';
+import fashionify2 from './resources/fashionify-mobile.png';
 
 const projects = [
     {
@@ -13,7 +14,9 @@ const projects = [
         role: "Designed, developed and tested the website",
         technologies: [
             "html", "css", "javascript", "sass", "react", "redux", "php", "laravel"
-        ]
+        ],
+        desktopImage: fashionify1,
+        mobileImage: fashionify2
     },
     {
         name: "Fashionify",
@@ -21,7 +24,9 @@ const projects = [
         role: "Designed, developed and tested the website",
         technologies: [
             "html", "css", "javascript", "sass", "react", "node"
-        ]
+        ],
+        desktopImage: fashionify1,
+        mobileImage: fashionify2
     },
     {
         name: "Fashionify",
@@ -29,7 +34,9 @@ const projects = [
         role: "Designed, developed and tested the website",
         technologies: [
             "html", "css", "javascript", "sass", "react", "php", "laravel"
-        ]
+        ],
+        desktopImage: fashionify1,
+        mobileImage: fashionify2
     },
     {
         name: "Fashionify",
@@ -37,7 +44,9 @@ const projects = [
         role: "Designed, developed and tested the website",
         technologies: [
             "html", "css", "javascript", "sass", "react", "php", "laravel"
-        ]
+        ],
+        desktopImage: fashionify1,
+        mobileImage: fashionify2
     },
 ]
 

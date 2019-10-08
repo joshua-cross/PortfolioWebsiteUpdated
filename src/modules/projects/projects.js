@@ -75,7 +75,10 @@ class Projects extends React.Component {
                             <p>{project.role}</p>
                         </div>
                     
-                        <Devices />
+                        <Devices
+                            desktopImage = {project.desktopImage}
+                            mobileImage = {project.mobileImage}
+                        />
                     </div>
                 </div>
             )

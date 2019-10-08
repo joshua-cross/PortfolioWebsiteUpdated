@@ -4,6 +4,10 @@
     .contents {
         display: flex;
         align-items: flex-start;
+
+        .text {
+            width: 50%;
+        } 
     }
     i, .icon {
         font-size: 40px;
@@ -54,10 +58,6 @@
     background-color: #F3F3F3;
 }
 
-.text{
-    width: 50%;
-} 
-
 .devices {
     width: 50%;
     position: relative;
@@ -77,5 +77,12 @@
         display: block;
         position: relative;
         float: right;
+    }
+}
+
+.deviceImage {
+    width: 100%;
+    img {
+        width: 100%;
     }
 }

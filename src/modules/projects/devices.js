@@ -24,7 +24,9 @@ class Devices extends React.Component {
                         orientation = {"portrait"}
                         transform = {0.45}
                     >
-                        <p>Hello World</p>
+                        <div className = "deviceImage">
+                            <img src = {this.props.desktopImage} />
+                        </div>
                     </MarvelDevices>
                 </div>
                 <div className = "phone">
@@ -34,7 +36,9 @@ class Devices extends React.Component {
                         orientation = {"portrait"}
                         transform = {0.25}
                     >
-                        <p>Hello world</p>
+                        <div className = "deviceImage">
+                        <img src = {this.props.mobileImage} />
+                        </div>
                     </MarvelDevices>
                 </div> 
             </div>

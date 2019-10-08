@@ -2,6 +2,62 @@
   padding: 60px 120px;
 }
 
+.project .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project i, .project .icon {
+  font-size: 40px;
+  color: #A45412;
+  margin-right: 5px;
+}
+
+.project i:last-of-type {
+  margin-right: 0px;
+}
+
+.project h1, .project h2, .project p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.project h1 {
+  font-family: "standardTT";
+  font-size: 56px;
+  letter-spacing: -0.7px;
+  margin-bottom: 5px;
+}
+
+.project h2 {
+  font-family: "heebo";
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -0.7px;
+  margin-bottom: 20px;
+}
+
+.project p {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.project p:last-of-type {
+  margin-bottom: 0px;
+}
+
+.technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 45px;
+}
+
 .project:nth-child(even) {
   background-color: #F6F6F6;
 }

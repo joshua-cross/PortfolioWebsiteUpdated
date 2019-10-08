@@ -1,9 +1,53 @@
 .project {
     padding: 60px 120px;
+    .contents {
+        display: flex;
+    }
+    i, .icon {
+        font-size: 40px;
+        color: #A45412;
+        margin-right: 5px;
+    }
+    i:last-of-type {
+        margin-right: 0px;
+    }
+    h1, h2, p {
+        padding: 0px;
+        margin: 0px;
+    }
+    h1 {
+        font-family: "standardTT";
+        font-size: 56px;
+        letter-spacing: -0.7px;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-family: "heebo";
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: -0.7px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0px;
+    }
 }
+
+.technologies {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
 .project:nth-child(even) {
     background-color: #F6F6F6;
-  }
-  .project:nth-child(odd) {
+}
+.project:nth-child(odd) {
     background-color: #F3F3F3;
-  }
+}

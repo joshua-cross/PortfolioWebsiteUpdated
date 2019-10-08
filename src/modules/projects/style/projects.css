@@ -1,5 +1,6 @@
 .project {
   padding: 60px 120px;
+  overflow: hidden;
 }
 
 .project .contents {

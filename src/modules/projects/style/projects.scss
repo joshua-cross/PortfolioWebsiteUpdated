@@ -2,6 +2,7 @@
     padding: 60px 120px;
     .contents {
         display: flex;
+        align-items: flex-start;
     }
     i, .icon {
         font-size: 40px;
@@ -50,4 +51,30 @@
 }
 .project:nth-child(odd) {
     background-color: #F3F3F3;
+}
+
+.text{
+    width: 50%;
+} 
+
+.devices {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    .phone {
+        color: white;
+        display: inline;
+        position: absolute;
+        bottom: -6px;
+        left: 95px;
+        // display: none;
+        z-index: 2;
+    }
+
+    .laptop {
+        color: red;
+        display: block;
+        position: relative;
+        float: right;
+    }
 }

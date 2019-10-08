@@ -6,6 +6,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .project i, .project .icon {
@@ -64,5 +67,31 @@
 
 .project:nth-child(odd) {
   background-color: #F3F3F3;
+}
+
+.text {
+  width: 50%;
+}
+
+.devices {
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+
+.devices .phone {
+  color: white;
+  display: inline;
+  position: absolute;
+  bottom: -6px;
+  left: 95px;
+  z-index: 2;
+}
+
+.devices .laptop {
+  color: red;
+  display: block;
+  position: relative;
+  float: right;
 }
 /*# sourceMappingURL=projects.css.map */

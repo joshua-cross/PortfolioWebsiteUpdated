@@ -16,23 +16,27 @@ class Devices extends React.Component {
 
     render() {
         return(
-            <div>
-            <MarvelDevices
-                deviceName = {"iphone6"}
-                color = {"black"}
-                orientation = {"portrait"}
-                transform = {0.25}
-            >
-                <p>Hello world</p>
-            </MarvelDevices>
-            <MarvelDevices
-                deviceName = {"macbook"}
-                color = {"black"}
-                orientation = {"portrait"}
-                transform = {0.5}
-            >
-                <p>Hello World</p>
-            </MarvelDevices>
+            <div className = "devices">
+                <div className = "laptop">
+                    <MarvelDevices
+                        deviceName = {"macbook"}
+                        color = {"black"}
+                        orientation = {"portrait"}
+                        transform = {0.45}
+                    >
+                        <p>Hello World</p>
+                    </MarvelDevices>
+                </div>
+                <div className = "phone">
+                    <MarvelDevices
+                        deviceName = {"iphone6"}
+                        color = {"black"}
+                        orientation = {"portrait"}
+                        transform = {0.25}
+                    >
+                        <p>Hello world</p>
+                    </MarvelDevices>
+                </div> 
             </div>
         );
     }

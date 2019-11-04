@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style/secondaryProjects.css";
+import {Link} from 'react-router-dom';
 
 class SecondaryProjects extends React.Component {
 
@@ -18,9 +19,7 @@ class SecondaryProjects extends React.Component {
                     </p>
 
                     <div className = "read-more-holder">
-                        <a className = "read-more" href = "">
-                            read more
-                        </a>
+                        <Link className = "read-more" to = {`/project/${project.id}`}>read more</Link>
                     </div>
                 </div>
             )

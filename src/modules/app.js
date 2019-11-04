@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {BrowserRouter, Route, Link} from 'react-router-dom';
+
 import Bar from './navigation/bar';
 import Intro from './Introduction/intro';
 import Projects from './projects/projects';
@@ -11,9 +13,11 @@ import canadaStrikesBack from './resources/CanadaStrikesBack.png';
 import carCoster1 from './resources/carcoster1.png';
 import karrotKingVideo from './resources/KarrotKing.mp4';
 import SecondaryProjects from './secondary-projects/secondaryProjects';
+import Footer from './footer/footer';
 
 const secondaryProjects = [
     {
+        id: 1,
         name: "Fashionify",
         description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
         role: "Designed, developed and tested the website",
@@ -21,6 +25,7 @@ const secondaryProjects = [
         video: karrotKingVideo
     },
     {
+        id: 2,
         name: "Canada strikes back",
         description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
         role: "Designed, developed and tested the website",
@@ -28,6 +33,7 @@ const secondaryProjects = [
         video: karrotKingVideo
     },
     {
+        id: 3,
         name: "Car Coster",
         description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
         role: "Designed, developed and tested the website",
@@ -79,6 +85,49 @@ const projects = [
     },
 ]
 
+const homePage = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <Intro />
+            <Projects
+                projects = {projects}
+            />
+            <SecondaryProjects
+                projects = {secondaryProjects}
+            />
+            <Footer />
+        </div>
+    ); 
+}
+
+const project = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <p>Hello World</p>
+        </div>
+    )
+}
+
+const add = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <p>Hello World</p>
+        </div>
+    )
+}
+
+const login = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <p>Hello World</p>
+        </div>
+    )
+}
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -99,19 +148,20 @@ class App extends React.Component {
 
     }
 
+    homePage = () => {
+
+    }
+
     render() {
         return (
-            <div className = "container">
-                <Bar />
-                <Intro />
-                <Projects
-                    projects = {projects}
-                />
-                <SecondaryProjects
-                    projects = {secondaryProjects}
-                />
-            </div>
-        );
+            <BrowserRouter>
+                <div>
+                    <Route path = "/" exact component = {homePage} />
+                    <Route path = "/project/:id" component = {project} />
+                    <Route path = "/login" component = {login} />
+                </div>
+            </BrowserRouter>
+        )
     }
 }
 

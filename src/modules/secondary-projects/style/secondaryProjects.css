@@ -1,0 +1,80 @@
+.secondary-projects {
+  padding: 90px 120px;
+}
+
+.secondary-projects h1 {
+  font-family: "standardTT";
+  font-size: 56px;
+  letter-spacing: -0.7px;
+  margin: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+.secondary-projects h2 {
+  font-family: heebo;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  color: #3a3a3a;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.secondary-projects p {
+  margin: 0px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+
+.secondary-projects .secondary-project-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.secondary-projects .secondary-project {
+  width: 30%;
+}
+
+.secondary-projects .secondary-project .secondary-project-image {
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.secondary-projects .secondary-project .secondary-project-image img {
+  width: 105%;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  margin: -7.5px;
+}
+
+.read-more-holder {
+  margin-top: 25px;
+}
+
+.read-more {
+  text-decoration: none;
+  font-family: "standardTT";
+  letter-spacing: 0.83px;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-top: 20px;
+  color: #A45412;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #773c0d;
+}
+/*# sourceMappingURL=secondaryProjects.css.map */

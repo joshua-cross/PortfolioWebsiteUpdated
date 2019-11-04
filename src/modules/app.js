@@ -6,6 +6,35 @@ import Projects from './projects/projects';
 
 import fashionify1 from './resources/fashionify-desktop.png';
 import fashionify2 from './resources/fashionify-mobile.png';
+import karrotKing from './resources/KarrotKing.png';
+import canadaStrikesBack from './resources/CanadaStrikesBack.png';
+import carCoster1 from './resources/carcoster1.png';
+import karrotKingVideo from './resources/KarrotKing.mp4';
+import SecondaryProjects from './secondary-projects/secondaryProjects';
+
+const secondaryProjects = [
+    {
+        name: "Fashionify",
+        description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
+        role: "Designed, developed and tested the website",
+        image: karrotKing,
+        video: karrotKingVideo
+    },
+    {
+        name: "Canada strikes back",
+        description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
+        role: "Designed, developed and tested the website",
+        image: canadaStrikesBack,
+        video: karrotKingVideo
+    },
+    {
+        name: "Car Coster",
+        description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
+        role: "Designed, developed and tested the website",
+        image: carCoster1,
+        video: karrotKingVideo
+    }
+];
 
 const projects = [
     {
@@ -77,6 +106,9 @@ class App extends React.Component {
                 <Intro />
                 <Projects
                     projects = {projects}
+                />
+                <SecondaryProjects
+                    projects = {secondaryProjects}
                 />
             </div>
         );

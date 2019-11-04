@@ -14,6 +14,7 @@ import carCoster1 from './resources/carcoster1.png';
 import karrotKingVideo from './resources/KarrotKing.mp4';
 import SecondaryProjects from './secondary-projects/secondaryProjects';
 import Footer from './footer/footer';
+import Login from './login/login';
 
 const secondaryProjects = [
     {
@@ -106,6 +107,7 @@ const project = () => {
         <div className = "container">
             <Bar />
             <p>Hello World</p>
+            <Footer />
         </div>
     )
 }
@@ -115,6 +117,7 @@ const add = () => {
         <div className = "container">
             <Bar />
             <p>Hello World</p>
+            <Footer />
         </div>
     )
 }
@@ -123,7 +126,8 @@ const login = () => {
     return (
         <div className = "container">
             <Bar />
-            <p>Hello World</p>
+            <Login />
+            <Footer />
         </div>
     )
 }

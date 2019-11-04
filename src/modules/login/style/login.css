@@ -1,0 +1,67 @@
+.login {
+  padding: 40px 60px;
+}
+
+.login label {
+  letter-spacing: -0.3px;
+  font-family: heebo;
+  font-size: 20px;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+}
+
+.login .form-label {
+  margin-bottom: 5px;
+}
+
+.login .form-label label {
+  margin: 0px;
+  font-weight: 500;
+}
+
+.login .form-input:last-of- {
+  margin-bottom: 1000px;
+}
+
+.login input, .login .submit {
+  border-radius: 5px;
+  font-family: heebo;
+  font-size: 18px;
+}
+
+.login input[type=text], .login input[type=password] {
+  background-color: transparent;
+  border: 3px solid #3a3a3a;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.login .submit {
+  letter-spacing: -0.5px;
+  color: white;
+  background-color: #A45412;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.login .submit:hover {
+  background-color: #773c0d;
+}
+
+.login input:last-of-type {
+  margin-bottom: 30px;
+}
+
+.login input[type=text]:focus, .login input[type=password]:focus {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=login.css.map */

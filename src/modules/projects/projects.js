@@ -79,7 +79,12 @@ class Projects extends React.Component {
                             desktopImage = {project.desktopImage}
                             mobileImage = {project.mobileImage}
                         />
+                           
                     </div>
+                    <div>
+                        <button className = "project-button website-button">View Website</button>
+                        <button className = "project-button github-button">View GitHub</button>
+                    </div>  
                 </div>
             )
         });

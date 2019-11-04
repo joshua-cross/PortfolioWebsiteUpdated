@@ -103,4 +103,49 @@
 .deviceImage img {
   width: 100%;
 }
+
+.website-button, .github-button {
+  padding: 25px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-right: 50px;
+  font-family: heebo;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.project-button {
+  margin-top: 80px;
+}
+
+.project-button:last-of-type {
+  margin-right: 0px;
+}
+
+.website-button {
+  background-color: #A45412;
+  color: white;
+}
+
+.website-button:hover {
+  background-color: #773c0d;
+}
+
+.github-button {
+  background-color: transparent;
+  border: 5px solid #3a3a3a;
+  color: #3a3a3a;
+  padding: 20px 40px;
+}
+
+.github-button:hover {
+  background-color: #3a3a3a;
+  color: white;
+}
 /*# sourceMappingURL=projects.css.map */

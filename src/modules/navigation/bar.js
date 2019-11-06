@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Logo from './logo';
 import Links from './links';
@@ -48,4 +49,4 @@ class Bar extends React.Component {
     }
 }
 
-export default Bar;
+export default connect (null)(Bar);

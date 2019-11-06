@@ -112,7 +112,17 @@ const project = () => {
     )
 }
 
-const add = () => {
+const addPrimary = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <p>Hello World</p>
+            <Footer />
+        </div>
+    )
+}
+
+const addSecondary = () => {
     return (
         <div className = "container">
             <Bar />
@@ -161,6 +171,8 @@ class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <Route path = "/" exact component = {homePage} />
+                    <Route path = '/addprimary' component = {addPrimary}/>
+                    <Route path = '/addsecondary' component = {addSecondary}/>
                     <Route path = "/project/:id" component = {project} />
                     <Route path = "/login" component = {login} />
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/logo.css'
+import {connect} from 'react-redux';
 
 
 class Logo extends React.Component {
@@ -25,4 +26,4 @@ class Logo extends React.Component {
     }
 }
 
-export default Logo;
+export default connect(null)(Logo);

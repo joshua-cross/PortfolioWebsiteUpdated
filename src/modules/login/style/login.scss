@@ -30,11 +30,18 @@
 
     input[type=text], input[type=password] {
         background-color: transparent;
-        border: 3px solid #3a3a3a;
         padding: 10px 20px;
         letter-spacing: 1.5px;
         width: 250px;
         margin-bottom: 20px;
+    }
+
+    .input-no-error {
+        border: 3px solid #3a3a3a;
+    }
+
+    .input-error {
+        border: 3px solid #DB2424;
     }
 
     .submit {
@@ -60,4 +67,7 @@
     input[type=text]:focus, input[type=password]:focus {
         box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
+}
+
+.error {
 }

@@ -23,13 +23,13 @@
   margin-bottom: 1000px;
 }
 
-.login input, .login .submit {
+.login input, .login .submit, .login textarea {
   border-radius: 5px;
   font-family: heebo;
   font-size: 18px;
 }
 
-.login input[type=text], .login input[type=password] {
+.login input[type=text], .login input[type=password], .login textarea {
   background-color: transparent;
   padding: 10px 20px;
   letter-spacing: 1.5px;
@@ -37,6 +37,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 20px;
+}
+
+.login textarea {
+  min-height: 150px;
 }
 
 .login .input-no-error {
@@ -91,5 +95,44 @@
   font-size: 18px;
   letter-spacing: 0.8px;
   margin: 0px;
+}
+
+.tech {
+  background-color: #773c0d;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tech p {
+  color: white;
+  margin: 0px;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+
+.tech .remove {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: heebo;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.tech:last-of-type {
+  margin-right: 0px;
+}
+
+.tech:hover {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=login.css.map */

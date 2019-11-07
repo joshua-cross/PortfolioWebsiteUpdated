@@ -5,6 +5,8 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Bar from './navigation/bar';
 import Intro from './Introduction/intro';
 import Projects from './projects/projects';
+import PrimaryForm from './addProjects/primaryForm';
+import SecondaryForm from './addProjects/secondaryForm';
 
 import fashionify1 from './resources/fashionify-desktop.png';
 import fashionify2 from './resources/fashionify-mobile.png';
@@ -116,7 +118,7 @@ const addPrimary = () => {
     return (
         <div className = "container">
             <Bar />
-            <p>Hello World</p>
+            <PrimaryForm/>
             <Footer />
         </div>
     )
@@ -126,7 +128,7 @@ const addSecondary = () => {
     return (
         <div className = "container">
             <Bar />
-            <p>Hello World</p>
+            <SecondaryForm/>
             <Footer />
         </div>
     )

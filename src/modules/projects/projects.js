@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Devices from './devices';
 
@@ -100,4 +101,10 @@ class Projects extends React.Component {
     }
 }
 
-export default Projects;
+const mapStateToProps = (state, ourProps) => {
+    return({
+        status: state.login
+    });
+}
+
+export default connect(mapStateToProps)(Projects);

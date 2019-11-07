@@ -22,15 +22,15 @@
         margin-bottom: 1000px;
     }
 
-    input, .submit, textarea {
+    input, .submit, textarea, select {
         border-radius: 5px;
         font-family: heebo;
         font-size: 18px;
     }
 
-    input[type=text], input[type=password], textarea {
+    input[type=text], input[type=password], textarea, select {
         background-color: transparent;
-        padding: 10px 20px;
+        padding: 10px 20px !important;
         letter-spacing: 1.5px;
         width: 400px;
         box-sizing: border-box;
@@ -127,4 +127,11 @@
 
 .tech:hover {
     box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.imageUpload {
+    max-width: 30%;
+    img {
+        width: 100%;
+    }
 }

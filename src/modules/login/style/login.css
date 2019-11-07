@@ -23,15 +23,15 @@
   margin-bottom: 1000px;
 }
 
-.login input, .login .submit, .login textarea {
+.login input, .login .submit, .login textarea, .login select {
   border-radius: 5px;
   font-family: heebo;
   font-size: 18px;
 }
 
-.login input[type=text], .login input[type=password], .login textarea {
+.login input[type=text], .login input[type=password], .login textarea, .login select {
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 10px 20px !important;
   letter-spacing: 1.5px;
   width: 400px;
   -webkit-box-sizing: border-box;
@@ -134,5 +134,13 @@
 .tech:hover {
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.imageUpload {
+  max-width: 30%;
+}
+
+.imageUpload img {
+  width: 100%;
 }
 /*# sourceMappingURL=login.css.map */

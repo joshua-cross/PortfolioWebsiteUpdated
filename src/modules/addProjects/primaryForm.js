@@ -7,6 +7,7 @@ import '../login/style/login.css';
 import Name from './form/name';
 import Textarea from './form/textarea';
 import Tech from './form/tech';
+import Upload from './form/upload';
 
 class PrimaryForm extends React.Component {
     constructor(props) {
@@ -16,7 +17,9 @@ class PrimaryForm extends React.Component {
             name: "",
             description: "",
             field: "",
-            tech: []
+            tech: [],
+            desktopImage: null,
+            mobileImage: null
         }
     }
 
@@ -44,6 +47,18 @@ class PrimaryForm extends React.Component {
         })
     }
     
+    desktopImageChosen = (image) => {
+        this.setState({
+            desktopImage: image
+        })
+    }
+
+    mobileImageChosen = (image) => {
+        this.setState({
+            mobileImage: image
+        });
+    }
+
     render() {
         return (
             <div className = "login">
@@ -61,6 +76,18 @@ class PrimaryForm extends React.Component {
                 />
                 <Tech 
                     techChanged = {this.techChanged}
+                />
+                <Upload 
+                    type = "image"
+                    fileChosen = {this.desktopImageChosen}
+                />
+                <Upload 
+                    type = "image"
+                    fileChosen = {this.mobileImageChosen}
+                />
+                <Upload 
+                    type = "video"
+                    fileChosen = {this.desktopImageChosen}
                 />
             </div>
         )

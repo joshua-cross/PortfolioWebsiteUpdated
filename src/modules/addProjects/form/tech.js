@@ -23,6 +23,7 @@ class Tech extends React.Component {
         this.setState({
             selectedTech: selectedTech
         })
+        this.props.techChanged(selectedTech);
     }
 
     renderSelect = () => {
@@ -46,6 +47,7 @@ class Tech extends React.Component {
         this.setState({
             selectedTech: selectedTech
         })
+        this.props.techChanged(selectedTech);
     }
 
     //rendering all the tech the user selected from the <options>

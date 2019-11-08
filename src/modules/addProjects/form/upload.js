@@ -32,32 +32,56 @@ class Upload extends React.Component {
         }
     }
 
-    displayUpload = () => {
-        if(this.props.type === "image") {
+    //displyaying the label of the upload.
+    displayLabel = () => {
+        if(this.props.label) {
             return (
-                <input 
-                type = "file" 
-                name = "pic" 
-                accept = "image/*" 
-                onChange = {this.imageChanged}
-                />
-            )
-        } else if (this.props.type === "video") {
-            return (
-                <input 
-                type = "file" 
-                name = "pic" 
-                accept = "video/*" 
-                onChange = {this.imageChanged}
-                />
+                <div className = "form-label">
+                    <label for = "upload">{this.props.label}</label>
+                </div>
             )
         }
     }
+
+    displayUpload = () => {
+        if(this.props.type === "image") {
+            return (
+                <div className = "upload-holder">
+                    <label className = "upload">
+                        Upload Image
+                        <input 
+                        type = "file" 
+                        name = "upload" 
+                        accept = "image/*" 
+                        onChange = {this.imageChanged}
+                        />
+                    </label>
+                </div>
+            )
+        } else if (this.props.type === "video") {
+            return (
+                <div className = "upload-holder">
+                    <label className = "upload">
+                        Upload Video
+                        <input 
+                        type = "file" 
+                        name = "upload" 
+                        accept = "video/*" 
+                        onChange = {this.imageChanged}
+                        />
+                    </label>
+                </div>
+            )
+        }
+    }
+
+
 
     render() {
         return(
             <div className = "imageUpload">
                 {this.displayContent()}
+                {this.displayLabel()}
                 {this.displayUpload()}
             </div>
         )

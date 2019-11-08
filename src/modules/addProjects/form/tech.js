@@ -35,6 +35,14 @@ class Tech extends React.Component {
                 className = {this.state.className}
                 onChange = {this.techChosen}
             >
+                <option
+                value = ""
+                selected
+                disabled
+                hidden
+                >
+                    Choose tech
+                </option>
                 {options}
             </select>
         );

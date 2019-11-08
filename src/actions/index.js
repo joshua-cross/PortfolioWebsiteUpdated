@@ -25,7 +25,38 @@ export const login = (username, password) => async (dispatch, getState) => {
 // mobileImage: fashionify2
 
 export const addPrimaryProject = (name, description, role, technologies, desktopImage, mobileImage) => async (dispatch, getState) => {
-    
+    const data = new FormData()
+    data.append('name', name);
+    data.append('description', description);
+    data.append('tech', technologies);
+    data.append('desktopImage', desktopImage);
+    data.append('mobileImage', mobileImage);
+    data.append('role', role);
+
+    try {
+        const response = await test.post('addPrimaryProject', data)
+        console.log(response);
+        if(response) {
+            dispatch({
+                type: "ADD_PROJECT",
+                payload: response.data
+            });
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+//function that gets every project from the database.
+export const getProjects = () => async (dispatch, getState) => {
+    const response = await test.get('getPrimaryProjects');
+    if(response) {
+        console.log(response.data);
+        dispatch({
+            type: "GET_PROJECTS",
+            payload: response.data
+        });
+    }
 }
 
 // name: "Fashionify",
@@ -34,5 +65,5 @@ export const addPrimaryProject = (name, description, role, technologies, desktop
 // image: karrotKing,
 // video: karrotKingVideo
 export const addSecondaryProject = (name, description, role, images, video) => async (dispatch, getState) => {
-    
+
 }

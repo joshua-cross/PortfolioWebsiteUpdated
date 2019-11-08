@@ -15,6 +15,8 @@ class Textarea extends React.Component {
             this.setState({
                 description: this.props.value
             })
+
+            this.props.fieldChanged(this.props.value);
         }
     }
 

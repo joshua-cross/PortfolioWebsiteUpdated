@@ -8,7 +8,7 @@ import "./style/projects.css";
 import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import './style/device/devices.css'
 
-import {getProjects} from '../../actions';
+import {getProjects, deletePrimaryProject} from '../../actions';
 
 // npm install --save-dev @iconify/react @iconify/icons-simple-icons
 import { Icon, InlineIcon } from '@iconify/react';
@@ -100,7 +100,9 @@ class Projects extends React.Component {
     }
 
     deleteProject = (id) => {
-        console.log("deleting" + id);
+        // console.log("deleting" + id);
+        this.props.deletePrimaryProject(id);
+        this.props.getProjects();
     }
 
     //when the edit button is clicked, the app should redirect to an edit page.
@@ -208,4 +210,7 @@ const mapStateToProps = (state, ourProps) => {
     });
 }
 
-export default connect(mapStateToProps, {getProjects: getProjects})(Projects);
+export default connect(mapStateToProps, {
+    getProjects: getProjects,
+    deletePrimaryProject: deletePrimaryProject
+})(Projects);

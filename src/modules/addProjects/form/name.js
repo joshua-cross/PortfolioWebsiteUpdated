@@ -15,6 +15,8 @@ class Name extends React.Component {
             this.setState({
                 name: this.props.value
             })
+
+            this.props.nameChanged(this.props.value);
         }
     }
 

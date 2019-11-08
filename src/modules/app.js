@@ -118,7 +118,9 @@ const addPrimary = () => {
     return (
         <div className = "container">
             <Bar />
-            <PrimaryForm/>
+            <PrimaryForm
+                editing = {false}
+            />
             <Footer />
         </div>
     )
@@ -130,7 +132,8 @@ const editPrimary = (props) => {
         <div className = "container">
             <Bar />
             <PrimaryForm
-            id = {props.match.params.id}
+                id = {props.match.params.id}
+                editing = {true}
             />
             <Footer/>
         </div>

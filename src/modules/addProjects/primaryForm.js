@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addPrimaryProject, getProject} from '../../actions';
+import {addPrimaryProject, getProject, updateProject} from '../../actions';
 import {isEmpty} from 'lodash';
 
 import '../login/style/login.css';
@@ -96,6 +96,43 @@ class PrimaryForm extends React.Component {
             errors: errors
         });
     }
+    
+    editProject = () => {
+        var errors = [];
+        if(this.state.name.trim() === "" && this.props.primaryProject.name) {
+            errors.push("Please enter a title");
+        } 
+        if (this.state.description.trim() === "" && this.props.primaryProject.description) {
+            errors.push("Please enter a description");
+        } 
+        if (this.state.field.trim() === "" && this.props.primaryProject.role) {
+            errors.push("Please enter a role.");
+        } 
+        if (this.state.tech.length === 0 && this.props.primaryProject.tech) {
+            errors.push("Please select a minimum of 1 technology");
+        }
+
+        this.setState({
+            errors: errors
+        });
+
+        var desktopImage = this.state.desktopImage;
+        var mobileImage = this.state.mobileImage;
+
+        //if the mobile image in the state, and from the database are the same, do not update them
+        if(!desktopImage) {
+            desktopImage = undefined;
+        }
+
+        if(!mobileImage) {
+            mobileImage = undefined;
+        }
+
+        if(errors.length === 0) {
+            this.props.updateProject(this.props.id, this.state.name, this.state.description, this.state.role,
+                this.state.tech, this.state.desktopImage, this.state.mobileImage);
+        }
+    }
 
     //rendering the errors from this form.
     renderErrors = () => {
@@ -122,9 +159,6 @@ class PrimaryForm extends React.Component {
             // console.log("props", this.props.id);
             return (
                 <div className = "login">
-                    <p>{name}</p>
-                    <p>{description}</p>
-                    <p>{role}</p>
                     {/* <p>{this.props.id}</p> */}
                     <div className = "errors">
                         {this.renderErrors()}
@@ -165,7 +199,7 @@ class PrimaryForm extends React.Component {
                     /> */}
 
                     <div className = "form-button">
-                        <button className = "submit" onClick={this.createProject}>Create Project</button>
+                        <button className = "submit" onClick={this.editProject}>Edit Project</button>
                     </div>
                 </div>
             )
@@ -225,5 +259,6 @@ const mapStateToProps = (state, ourProps) => {
 
 export default connect(mapStateToProps, {
     addPrimaryProject: addPrimaryProject,
-    getProject: getProject
+    getProject: getProject,
+    updateProject: updateProject,
 })(PrimaryForm);

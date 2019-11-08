@@ -19,6 +19,8 @@ class Tech extends React.Component {
             this.setState({
                 selectedTech: this.props.value
             })
+
+            this.props.techChanged(this.props.value);
         }
     }
 

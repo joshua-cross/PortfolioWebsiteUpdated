@@ -71,6 +71,43 @@ export const getProject = (id) => async (dispatch, getState) => {
     }
 }
 
+export const updateProject = (id, name, description, role, technologies, desktopImage, mobileImage) => async (dispatch, getState) => {
+    const data = new FormData()
+    data.append('name', name);
+    data.append('description', description);
+    data.append('role', role);
+    data.append('tech', technologies);
+    if(desktopImage) {
+        data.append('desktopImage', desktopImage);
+    }
+
+    if(mobileImage) {
+        data.append('mobileImage', mobileImage);
+    }
+
+    try {
+        const response = await test.post('updatePrimaryProject/' + id, data);
+        if(response) {
+            console.log(response.data);
+            dispatch({
+                type: "UPDATE_PROJECT",
+                payload: response.data
+            })
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+//action to delete a specific primary action.
+export const deletePrimaryProject = (id) => async (dispatch, getState) => {
+    try {
+        const response = await test.post('detetePrimaryProject/' + id);
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 // name: "Fashionify",
 // description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
 // role: "Designed, developed and tested the website",

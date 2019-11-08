@@ -9,6 +9,14 @@ class Textarea extends React.Component {
             className: "input-no-error"
         }
     }
+    
+    componentDidMount = () => {
+        if(this.props.value) {
+            this.setState({
+                description: this.props.value
+            })
+        }
+    }
 
     descriptionChanged = (e) => {
         var description = e.target.value;

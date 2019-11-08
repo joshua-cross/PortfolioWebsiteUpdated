@@ -21,6 +21,11 @@ import reduxIcon from '@iconify/icons-simple-icons/redux';
 class Projects extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            redirecting: false,
+            idToEdit: -1
+        }
     }
 
     componentDidMount() {
@@ -98,8 +103,13 @@ class Projects extends React.Component {
         console.log("deleting" + id);
     }
 
+    //when the edit button is clicked, the app should redirect to an edit page.
     editButtin = (id) => {
         console.log("editing" + id);
+        this.setState({
+            redirecting: true,
+            idToEdit: id
+        });
     }
 
     //render an edit and delete button if the user is signed in.
@@ -169,11 +179,21 @@ class Projects extends React.Component {
             )
         })
     }
+
+    //redirecting the user to the edit page if the edit button was clicked.
+    redirect = () => {
+        if(this.state.redirecting === true) {
+            return (
+                <Redirect to = {`/editprimary/${this.state.idToEdit}`}/>
+            )
+        }
+    }
     
 
     render() {
         return (
             <div className = "projects">
+                {this.redirect()}
                 {this.renderProjects()}
                 {this.renderPrimaryProjects()}
             </div>

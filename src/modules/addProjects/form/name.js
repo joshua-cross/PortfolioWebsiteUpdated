@@ -10,6 +10,22 @@ class Name extends React.Component {
         }
     }
 
+    componentDidMount = () => {
+        if(this.props.value) {
+            this.setState({
+                name: this.props.value
+            })
+        }
+    }
+
+    // componentWillReceiveProps = (nextProps) => {
+    //     if(this.state.name === "" && nextProps.value) {
+    //         this.setState({
+    //             name: this.props.value
+    //         })
+    //     }
+    // }
+
     nameChanged = (event) => {
         var name = event.target.value;
         this.setState({

@@ -59,6 +59,18 @@ export const getProjects = () => async (dispatch, getState) => {
     }
 }
 
+export const getProject = (id) => async (dispatch, getState) => {
+    console.log("Looking for item: " + id);
+    const response = await test.get('getPrimaryProject/' + id);
+    if(response) {
+        console.log(response.data);
+        dispatch({
+            type: "GET_PROJECT",
+            payload: response.data
+        });
+    }
+}
+
 // name: "Fashionify",
 // description: "Pseudo E-Commerce website which allows users to view an inventory of items and add any wanted items to a basket.",
 // role: "Designed, developed and tested the website",

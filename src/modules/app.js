@@ -124,6 +124,19 @@ const addPrimary = () => {
     )
 }
 
+const editPrimary = (props) => {
+    console.log(props.match.params.id);
+    return (
+        <div className = "container">
+            <Bar />
+            <PrimaryForm
+            id = {props.match.params.id}
+            />
+            <Footer/>
+        </div>
+    )
+}
+
 const addSecondary = () => {
     return (
         <div className = "container">
@@ -176,6 +189,7 @@ class App extends React.Component {
                     <Route path = '/addprimary' component = {addPrimary}/>
                     <Route path = '/addsecondary' component = {addSecondary}/>
                     <Route path = "/project/:id" component = {project} />
+                    <Route path = '/editprimary/:id' component = {editPrimary}/>
                     <Route path = "/login" component = {login} />
                 </div>
             </BrowserRouter>

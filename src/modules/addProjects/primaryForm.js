@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addPrimaryProject} from '../../actions';
+import {addPrimaryProject, getProject} from '../../actions';
+import {isEmpty} from 'lodash';
 
 import '../login/style/login.css';
 
@@ -60,6 +61,12 @@ class PrimaryForm extends React.Component {
         });
     }
 
+    componentDidMount = () => {
+        if(this.props.id) {
+            this.props.getProject(this.props.id);
+        }
+    }
+
     //creating a project based on the data from the form
     createProject = () => {
         var errors = [];
@@ -98,46 +105,125 @@ class PrimaryForm extends React.Component {
     }
 
     render() {
-        return (
-            <div className = "login">
-                <div className = "errors">
-                    {this.renderErrors()}
-                </div>
-                <Name
-                    nameChanged = {this.nameChanged}
-                />
-                <Textarea
-                    labelText = "Project Description"
-                    fieldChanged = {this.descriptionChanged}
-                />
-                <Textarea
-                    labelText = "Role"
-                    fieldChanged = {this.roleChanged}
-                />
-                <Tech 
-                    techChanged = {this.techChanged}
-                />
-                <Upload 
-                    label = "Desktop Image"
-                    type = "image"
-                    fileChosen = {this.desktopImageChosen}
-                />
-                <Upload 
-                    label = "Mobile Image"
-                    type = "image"
-                    fileChosen = {this.mobileImageChosen}
-                />
-                {/* <Upload 
-                    type = "video"
-                    fileChosen = {this.desktopImageChosen}
-                /> */}
+        if(this.props.id && this.props.primaryProject.name) {
+            var primaryProject = this.props.primaryProject;
+            console.log("primaryProject", primaryProject)
+            var name = primaryProject.name;
+            var description = primaryProject.description;
+            var role = primaryProject.role;
+            var tech = primaryProject.tech;
+            var tech = primaryProject.tech.split('"').join('');
+            tech = tech.split(',');
+            //the url the images are stored in.
+            const url = "http://portfolio2.test/images/";
+            //getting the url for the images
+            var desktopImage = url + primaryProject.desktopImage;
+            var mobileImage = url + primaryProject.mobileImage;
+            // console.log("props", this.props.id);
+            return (
+                <div className = "login">
+                    <p>{name}</p>
+                    <p>{description}</p>
+                    <p>{role}</p>
+                    {/* <p>{this.props.id}</p> */}
+                    <div className = "errors">
+                        {this.renderErrors()}
+                    </div>
+                    <Name
+                        nameChanged = {this.nameChanged}
+                        value = {name}
+                    />
+                    <Textarea
+                        labelText = "Project Description"
+                        fieldChanged = {this.descriptionChanged}
+                        value = {description}
+                    />
+                    <Textarea
+                        labelText = "Role"
+                        fieldChanged = {this.roleChanged}
+                        value = {role}
+                    />
+                    <Tech 
+                        techChanged = {this.techChanged}
+                        value = {tech}
+                    />
+                    <Upload 
+                        label = "Desktop Image"
+                        type = "image"
+                        fileChosen = {this.desktopImageChosen}
+                        value = {desktopImage}
+                    />
+                    <Upload 
+                        label = "Mobile Image"
+                        type = "image"
+                        fileChosen = {this.mobileImageChosen}
+                        value = {mobileImage}
+                    />
+                    {/* <Upload 
+                        type = "video"
+                        fileChosen = {this.desktopImageChosen}
+                    /> */}
 
-                <div className = "form-button">
-                    <button className = "submit" onClick={this.createProject}>Create Project</button>
+                    <div className = "form-button">
+                        <button className = "submit" onClick={this.createProject}>Create Project</button>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        } else if (!this.props.id) {
+            // console.log("props", this.props.id);
+            return (
+                <div className = "login">
+                    {/* <p>{this.props.id}</p> */}
+                    <div className = "errors">
+                        {this.renderErrors()}
+                    </div>
+                    <Name
+                        nameChanged = {this.nameChanged}
+                    />
+                    <Textarea
+                        labelText = "Project Description"
+                        fieldChanged = {this.descriptionChanged}
+                    />
+                    <Textarea
+                        labelText = "Role"
+                        fieldChanged = {this.roleChanged}
+                    />
+                    <Tech 
+                        techChanged = {this.techChanged}
+                    />
+                    <Upload 
+                        label = "Desktop Image"
+                        type = "image"
+                        fileChosen = {this.desktopImageChosen}
+                    />
+                    <Upload 
+                        label = "Mobile Image"
+                        type = "image"
+                        fileChosen = {this.mobileImageChosen}
+                    />
+                    {/* <Upload 
+                        type = "video"
+                        fileChosen = {this.desktopImageChosen}
+                    /> */}
+
+                    <div className = "form-button">
+                        <button className = "submit" onClick={this.createProject}>Create Project</button>
+                    </div>
+                </div>
+            )
+        } else {
+            return "Loading..."
+        }
     }
 }
 
-export default connect(null, {addPrimaryProject: addPrimaryProject})(PrimaryForm);
+const mapStateToProps = (state, ourProps) => {
+    return({
+        primaryProject: state.primaryProject
+    })
+}
+
+export default connect(mapStateToProps, {
+    addPrimaryProject: addPrimaryProject,
+    getProject: getProject
+})(PrimaryForm);

@@ -14,6 +14,14 @@ class Tech extends React.Component {
         };
     }
 
+    componentDidMount = () => {
+        if(this.props.value) {
+            this.setState({
+                selectedTech: this.props.value
+            })
+        }
+    }
+
     techChosen = (e) => {
         console.log(e.target.value);
         var theTech = e.target.value;

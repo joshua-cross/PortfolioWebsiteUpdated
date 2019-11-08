@@ -173,13 +173,36 @@ class Projects extends React.Component {
                         />
                            
                     </div>
-                    <div>
-                        <button className = "project-button website-button">View Website</button>
-                        <button className = "project-button github-button">View GitHub</button>
-                    </div>  
+                    {this.renderProjectButtons(project)} 
                 </div>
             )
         })
+    }
+
+    //rendering the gitHub and the Website buttons if they exist.
+    renderProjectButtons = (project) => {
+        var buttons = [];
+        if(project.url) {
+            buttons.push(
+            <a 
+                href = {`${project.url}`}
+                className = "project-button website-button"
+            >
+                View Website
+            </a>
+            );
+        }
+
+        if(project.github) {
+            buttons.push(
+                <a
+                    href = {`${project.github}`}
+                    class = "project-button github-button"
+                >View GitHub</a>
+            )
+        }
+
+        return <div>{buttons}</div>;
     }
 
     //redirecting the user to the edit page if the edit button was clicked.

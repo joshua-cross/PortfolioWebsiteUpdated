@@ -40,7 +40,7 @@ class Name extends React.Component {
         return (
             <div>
                 <div className = {`form-label`}>
-                    <label for = "name">Project Name</label>
+                    <label for = "name">{this.props.label}</label>
                 </div>
                 <input 
                     type = "text"

@@ -122,6 +122,7 @@
 
 .project-button {
   margin-top: 80px;
+  text-decoration: none;
 }
 
 .project-button:last-of-type {

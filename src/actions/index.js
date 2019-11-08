@@ -24,7 +24,7 @@ export const login = (username, password) => async (dispatch, getState) => {
 // desktopImage: fashionify1,
 // mobileImage: fashionify2
 
-export const addPrimaryProject = (name, description, role, technologies, desktopImage, mobileImage) => async (dispatch, getState) => {
+export const addPrimaryProject = (name, description, role, technologies, desktopImage, mobileImage, url, github) => async (dispatch, getState) => {
     const data = new FormData()
     data.append('name', name);
     data.append('description', description);
@@ -32,6 +32,8 @@ export const addPrimaryProject = (name, description, role, technologies, desktop
     data.append('desktopImage', desktopImage);
     data.append('mobileImage', mobileImage);
     data.append('role', role);
+    data.append('url', url);
+    data.append('github', github);
 
     try {
         const response = await test.post('addPrimaryProject', data)
@@ -71,12 +73,14 @@ export const getProject = (id) => async (dispatch, getState) => {
     }
 }
 
-export const updateProject = (id, name, description, role, technologies, desktopImage, mobileImage) => async (dispatch, getState) => {
+export const updateProject = (id, name, description, role, technologies, desktopImage, mobileImage, url, github) => async (dispatch, getState) => {
     const data = new FormData()
     data.append('name', name);
     data.append('description', description);
     data.append('role', role);
     data.append('tech', technologies);
+    data.append('url', url);
+    data.append('github', github);
     if(desktopImage) {
         data.append('desktopImage', desktopImage);
     }

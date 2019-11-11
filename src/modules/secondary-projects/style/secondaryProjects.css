@@ -36,10 +36,13 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .secondary-projects .secondary-project {
   width: 30%;
+  margin-bottom: 60px;
 }
 
 .secondary-projects .secondary-project .secondary-project-image {

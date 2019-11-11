@@ -137,3 +137,14 @@ export const addSecondaryProject = (name, description, role, images, background,
         console.log(response);
     }
 }
+
+export const getSecondaryProjects = () => async (dispatch, getState) => {
+    const response = await test.get("/getSecondaryProjects");
+    if(response) {
+        console.log("secondaryProjects", response.data);
+        dispatch({
+            type: "GET_SECONDARY_PROJECTS",
+            payload: response.data
+        });
+    }
+}

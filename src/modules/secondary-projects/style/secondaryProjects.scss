@@ -27,10 +27,12 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     .secondary-project {
         width: 30%;
+        margin-bottom: 60px;
         .secondary-project-image {
             border-radius: 10px;
             box-shadow: 1px 1px 4px rgba(0,0,0,0.5);

@@ -22,7 +22,7 @@ class Upload extends React.Component {
         this.setState({
             file: URL.createObjectURL(e.target.files[0])
         });
-        this.props.fileChosen(e.target.files[0]);
+        this.props.fileChosen(e.target.files[0], this.props.fileId);
     }
 
     //display image
@@ -53,33 +53,67 @@ class Upload extends React.Component {
 
     displayUpload = () => {
         if(this.props.type === "image") {
-            return (
-                <div className = "upload-holder">
-                    <label className = "upload">
-                        Upload Image
-                        <input 
-                        type = "file" 
-                        name = "upload" 
-                        accept = "image/*" 
-                        onChange = {this.imageChanged}
-                        />
-                    </label>
-                </div>
-            )
+            if(this.props.active === "disabled") {
+                return (
+                    <div className = "upload-holder-disabled">
+                        <label className = "upload-disabled">
+                            Upload Image
+                            <input 
+                            type = "file" 
+                            name = "upload" 
+                            accept = "image/*" 
+                            onChange = {this.imageChanged}
+                            disabled
+                            />
+                        </label>
+                    </div>
+                )
+            } else {
+                return (
+                    <div className = "upload-holder">
+                        <label className = "upload">
+                            Upload Image
+                            <input 
+                            type = "file" 
+                            name = "upload" 
+                            accept = "image/*" 
+                            onChange = {this.imageChanged}
+                            />
+                        </label>
+                    </div>
+                )
+            }
         } else if (this.props.type === "video") {
-            return (
-                <div className = "upload-holder">
-                    <label className = "upload">
-                        Upload Video
-                        <input 
-                        type = "file" 
-                        name = "upload" 
-                        accept = "video/*" 
-                        onChange = {this.imageChanged}
-                        />
-                    </label>
-                </div>
-            )
+            if(this.props.active === "disabled") {
+                return (
+                    <div className = "upload-holder-disabled">
+                        <label className = "upload-disabled">
+                            Upload Video
+                            <input 
+                            type = "file" 
+                            name = "upload" 
+                            accept = "video/*" 
+                            onChange = {this.imageChanged}
+                            disabled
+                            />
+                        </label>
+                    </div>
+                )
+            } else {
+                return (
+                    <div className = "upload-holder">
+                        <label className = "upload">
+                            Upload Video
+                            <input 
+                            type = "file" 
+                            name = "upload" 
+                            accept = "video/*" 
+                            onChange = {this.imageChanged}
+                            />
+                        </label>
+                    </div>
+                )
+            }
         }
     }
 

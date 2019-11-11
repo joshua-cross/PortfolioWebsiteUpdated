@@ -170,4 +170,27 @@ input[type="file"] {
   font-size: 18px;
   cursor: pointer;
 }
+
+.upload-holder-disabled {
+  padding: 12.5px 20px;
+  margin-bottom: 20px;
+  background-color: #cfcfcf;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.upload-disabled {
+  color: #3a3a3a !important;
+  letter-spacing: -0.52px;
+  font-size: 18px;
+}
+
+.printscreens h2 {
+  letter-spacing: -0.3px;
+  font-family: heebo;
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=login.css.map */

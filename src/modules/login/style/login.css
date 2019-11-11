@@ -193,4 +193,18 @@ input[type="file"] {
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+.toggle-holder {
+  color: #3a3a3a;
+  font-family: heebo;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.toggle {
+  margin: 0px 20px;
+}
 /*# sourceMappingURL=login.css.map */

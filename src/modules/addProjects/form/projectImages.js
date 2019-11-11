@@ -24,6 +24,7 @@ class ProjectImages extends React.Component {
         this.setState({
             files: images,
         })
+        this.props.printscreensChanged(images);
     }
 
     removePrintscreen = (event) => {
@@ -43,6 +44,7 @@ class ProjectImages extends React.Component {
         this.setState({
             files: files
         })
+        this.props.printscreensChanged(files);
     }
     
     renderImageUploads = () => {

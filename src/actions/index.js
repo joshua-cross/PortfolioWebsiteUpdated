@@ -117,6 +117,23 @@ export const deletePrimaryProject = (id) => async (dispatch, getState) => {
 // role: "Designed, developed and tested the website",
 // image: karrotKing,
 // video: karrotKingVideo
-export const addSecondaryProject = (name, description, role, images, video) => async (dispatch, getState) => {
+export const addSecondaryProject = (name, description, role, images, background, backgroundType, url, github) => async (dispatch, getState) => {
+    var data = new FormData();
+    data.append('name', name);
+    data.append('description', description);
+    data.append('role', role);
+    data.append('url', url);
+    data.append('github', github);
+    for(var i = 0; i < images.length; i++) {
+        data.append('images[]', images[i]);
+    }
+    // data.append('images', images);
+    data.append('background', background);
+    data.append('backgroundType', backgroundType);
 
+    const response = await test.post('addSecondaryProject', data);
+    if(response) {
+        // getProjects();
+        console.log(response);
+    }
 }

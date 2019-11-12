@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+// import {Link} from 'react-router-dom';
 
-import {getSecondaryProjects} from '../../actions';
+import {getSecondaryProjects, deleteSecondaryProject} from '../../actions';
 import "./style/secondaryProjects.css";
 import {Link} from 'react-router-dom';
 
@@ -37,6 +38,21 @@ class SecondaryProjects extends React.Component {
         })
     }
 
+    removeProject = (id) => {
+        deleteSecondaryProject(id);
+    }
+
+    renderAdminButtons = (id) => {
+        if(this.props.status === "access granted") {
+            return (
+                <div className = "admin-buttons">
+                    <Link to = {`/editsecondary/${id}`}>Edit Project</Link>
+                    <button onClick = {() => {this.removeProject(id)}}>DeleteProject</button>
+                </div>
+            )
+        }
+    }
+
     renderSecondaryProjects = () => {
         if(this.props.secondaryProjects) {
             const url = "http://portfolio2.test/images/";
@@ -49,6 +65,7 @@ class SecondaryProjects extends React.Component {
                 var imageURL = url + images[0];
                 return(
                     <div class = "secondary-project">
+                        {this.renderAdminButtons(project.id)}
                         <div className = "secondary-project-image">
                             <img src = {imageURL} />
                         </div>
@@ -84,8 +101,9 @@ class SecondaryProjects extends React.Component {
 
 const mapStatetoProps = (state, ourProps) => {
     return({
-        secondaryProjects: state.secondaryProjects
+        secondaryProjects: state.secondaryProjects,
+        status: state.login
     });
 }
 
-export default connect(mapStatetoProps, {getSecondaryProjects, getSecondaryProjects})(SecondaryProjects);
+export default connect(mapStatetoProps, {getSecondaryProjects: getSecondaryProjects, deleteSecondaryProject: deleteSecondaryProject})(SecondaryProjects);

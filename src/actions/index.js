@@ -148,3 +148,11 @@ export const getSecondaryProjects = () => async (dispatch, getState) => {
         });
     }
 }
+
+export const deleteSecondaryProject = (id) => async (dispatch, getState) => {
+    const response = await test.post(`deleteSecondaryProject/${id}`);
+    if(response) {
+        console.log(response);
+        getSecondaryProjects();
+    }
+}

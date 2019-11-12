@@ -14,6 +14,14 @@ class ProjectImages extends React.Component {
         }
     }
 
+    componentDidMount = () => {
+        if(this.props.value) {
+            this.setState({
+                files: this.props.value
+            })
+        }
+    }
+
     addFile = (file, fileId) => {
         console.log("fileId: " + fileId + " file: " + file);
         var images = this.state.files;
@@ -55,6 +63,7 @@ class ProjectImages extends React.Component {
                 removeButton = <button id = {i} onClick = {this.removePrintscreen}>Remove printscreen</button>;
             }
             if(file) {
+                console.log("Image with file " + file);
                 return (
                     <div>
                         {removeButton}
@@ -69,6 +78,7 @@ class ProjectImages extends React.Component {
                     </div>
                 );
             } else {
+                console.log("Images does not have file.")
                 return (
                     <div>
                         {removeButton}

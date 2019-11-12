@@ -1,4 +1,5 @@
 import test from '../apis/test';
+import validator from 'validator';
 
 export const login = (username, password) => async (dispatch, getState) => {
     const response = await test.post('login', {
@@ -138,6 +139,50 @@ export const addSecondaryProject = (name, description, role, images, background,
     }
 }
 
+export const editSecondaryProject = (id, name, description, role, images, background, backgroundType, url, github) => async (dispatch, getState) => {
+    var data = new FormData();
+    data.append('name', name);
+    data.append('description', description);
+    data.append('role', role);
+    data.append('url', url);
+    data.append('github', github);
+    data.append('backgroundType', backgroundType);
+    if(images) {
+        for(var i = 0; i < images.length; i++) {
+            // if(typeof images[i] === 'string') {
+            //     if(validator.isURL(images[i])) {
+            //         images[i] = new File(images[i], "file" +  i);
+            //     }
+            // }
+            if(typeof images[i] === 'string') {
+                //converting a link to a file.
+                let response = await fetch(images[i]);
+                let data = await response.blob();
+                let metadata = {
+                    type: 'image/jpeg'
+                };
+                images[i] = new File([data], `file${i}.jpg`, metadata);
+                console.log("file: ", images[i]);
+            }
+            data.append('images[]', images[i]);
+        }
+        console.log("images after links", images);
+    }
+
+    if(background) {
+        data.append('background', background);
+    }
+
+    try {
+        const response = await test.post(`editSecondaryProject/${id}`, data);
+        if(response) {
+            console.log(response);
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 export const getSecondaryProjects = () => async (dispatch, getState) => {
     const response = await test.get("/getSecondaryProjects");
     if(response) {
@@ -146,6 +191,21 @@ export const getSecondaryProjects = () => async (dispatch, getState) => {
             type: "GET_SECONDARY_PROJECTS",
             payload: response.data
         });
+    }
+}
+
+export const getSecondaryProject = (id) => async (dispatch, getState) => {
+    try {
+    const response = await test.get(`getSecondaryProject/${id}`);
+    if(response) {
+        console.log("secondary project: ", response.data)
+        dispatch({
+            type: "GET_SECONDARY_PROJECT",
+            payload: response.data
+        })
+    }
+    } catch (e) {
+        console.log(e);
     }
 }
 

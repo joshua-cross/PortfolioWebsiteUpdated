@@ -1,4 +1,5 @@
 import React from 'react';
+import validator from 'validator';
 
 class Upload extends React.Component {
     constructor(props) {
@@ -11,9 +12,25 @@ class Upload extends React.Component {
 
     componentDidMount = () => {
         if(this.props.value) {
+            console.log("This image has the file: " + this.props.value)
             this.setState({
                 file: this.props.value
             })
+        }
+    }
+
+    componentWillReceiveProps = (nextProps) => {
+        if(nextProps.value) {
+            var image = nextProps.value;
+            if(typeof image === 'string') {
+                //ensuring the url is a link so we don't override new images.
+                if(validator.isURL(image)) {
+                    console.log("This image has the file: " + nextProps.value)
+                    this.setState({
+                        file: nextProps.value
+                    })
+                }
+            }
         }
     }
 

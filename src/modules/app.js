@@ -17,6 +17,7 @@ import karrotKingVideo from './resources/KarrotKing.mp4';
 import SecondaryProjects from './secondary-projects/secondaryProjects';
 import Footer from './footer/footer';
 import Login from './login/login';
+import ProjectPage from './projectPage/projectPage';
 
 const secondaryProjects = [
     {
@@ -104,11 +105,13 @@ const homePage = () => {
     ); 
 }
 
-const project = () => {
+const project = (props) => {
     return (
         <div className = "container">
             <Bar />
-            <p>Hello World</p>
+            <ProjectPage
+                id = {props.match.params.id}
+            />
             <Footer />
         </div>
     )

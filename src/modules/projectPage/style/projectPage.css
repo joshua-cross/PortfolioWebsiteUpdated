@@ -1,0 +1,120 @@
+html, body {
+  margin: 0px;
+}
+
+.background {
+  width: 100%;
+  position: relative;
+}
+
+.background .title-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.background .scroll-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.background .scroll-button button {
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
+  font-family: standardTT;
+  background-color: #A45412;
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.background .title {
+  background-color: rgba(58, 58, 58, 0.25);
+  border: 3px solid #3a3a3a;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 10px 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.background .title h1 {
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  margin: 0px;
+  letter-spacing: -0.7px;
+  font-family: standardTT;
+  text-shadow: 3px 3px 2px #3a3a3a;
+}
+
+.background video {
+  width: 100%;
+}
+
+.background img {
+  width: 100%;
+}
+
+.secondary-content {
+  padding: 60px 120px;
+}
+
+.secondary-content div {
+  margin-bottom: 50px;
+}
+
+.secondary-content p, .secondary-content h2 {
+  font-family: heebo;
+  color: #3a3a3a;
+  margin: 0px;
+}
+
+.secondary-content p {
+  letter-spacing: 1px;
+}
+
+.secondary-content h2 {
+  letter-spacing: -0.7px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.image-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.image-holder .secondary-image {
+  width: 30%;
+}
+
+.image-holder .secondary-image img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=projectPage.css.map */

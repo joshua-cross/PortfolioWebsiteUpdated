@@ -284,12 +284,14 @@ class PrimaryForm extends React.Component {
                         type = "image"
                         fileChosen = {this.desktopImageChosen}
                         active = "active"
+                        value = {this.state.desktopImage}
                     />
                     <Upload 
                         label = "Mobile Image"
                         type = "image"
                         fileChosen = {this.mobileImageChosen}
                         active = "active"
+                        value = {this.state.mobileImage}
                     />
                     <Name
                         nameChanged = {this.urlChanged}

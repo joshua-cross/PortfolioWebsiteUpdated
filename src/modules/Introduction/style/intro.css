@@ -9,9 +9,42 @@
           align-items: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .intro {
+    padding: 40px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    padding: 80px 45px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .intro {
+    padding: 150px 110px;
+  }
+}
+
 .intro .text {
   display: inline-block;
   margin-left: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro .text {
+    margin-left: 0px;
+    text-align: center;
+  }
 }
 
 .intro .text h1, .intro .text h2, .intro .text h3 {
@@ -22,8 +55,25 @@
 .intro .text h1 {
   font-family: "standardTT";
   letter-spacing: -0.7px;
-  font-size: 56px;
   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro .text h1 {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro .text h1 {
+    font-size: 44px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .intro .text h1 {
+    font-size: 56px;
+  }
 }
 
 .intro .text h2, .intro .text h3 {
@@ -37,10 +87,46 @@
   font-weight: 500;
 }
 
+@media only screen and (max-width: 767px) {
+  .intro .text h2 {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro .text h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .intro .text h2 {
+    font-size: 36px;
+  }
+}
+
 .intro .text h3 {
   font-size: 28px;
   letter-spacing: 1.5px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro .text h3 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro .text h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .intro .text h3 {
+    font-size: 28px;
+  }
 }
 
 .image {
@@ -49,5 +135,30 @@
   border: 1px solid #3A3A3A;
   -webkit-box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 767px) {
+  .image {
+    width: 75%;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .image {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .image {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .image {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=intro.css.map */

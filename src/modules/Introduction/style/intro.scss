@@ -3,17 +3,40 @@
     padding: 150px 110px;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 767px) {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 80px 45px;
+        flex-direction: row;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 150px 110px;
+    }
     .text {
         display: inline-block;
+        @media only screen and (max-width: 767px) {
+            margin-left: 0px;
+            text-align: center;
+        }
         margin-left: 50px;
         h1, h2, h3 {
             padding: 0px;
             margin: 0px;
         }
         h1 {
+            @media only screen and (max-width: 767px) {
+                font-size: 38px;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 44px;
+            }
+            @media only screen and (min-width: 1026px) {
+                font-size: 56px;
+            }
             font-family: "standardTT";
             letter-spacing: -0.7px;
-            font-size: 56px;
             margin-bottom: 5px;
         }
         h2, h3 {
@@ -21,6 +44,15 @@
         }
 
         h2 {
+            @media only screen and (max-width: 767px) {
+                font-size: 26px;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 30px;
+            }
+            @media only screen and (min-width: 1026px) {
+                font-size: 36px;
+            }
             letter-spacing: 1px;
             font-size: 36px;
             margin-bottom: 5px;
@@ -28,6 +60,15 @@
         }
 
         h3 {
+            @media only screen and (max-width: 767px) {
+                font-size: 20px;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 24px;
+            }
+            @media only screen and (min-width: 1026px) {
+                font-size: 28px;
+            }
             font-size: 28px;
             letter-spacing: 1.5px;
             font-weight: 400;
@@ -36,6 +77,19 @@
 }
 
 .image {
+    @media only screen and (max-width: 767px) {
+        width: 75%;
+        margin-bottom: 40px;
+    }
+    @media only screen and (min-width: 768px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 850px) {
+        width: 25%;
+    }
+    @media only screen and (min-width: 1026px) {
+        width: 20%;
+    }
     border-radius: 50%;
     width: 20%;
     border: 1px solid #3A3A3A;

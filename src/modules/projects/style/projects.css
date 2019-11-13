@@ -1,6 +1,23 @@
 .project {
-  padding: 60px 120px;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  .project {
+    padding: 40px 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    padding: 50px 50px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .project {
+    padding: 60px 120px;
+  }
 }
 
 .project .contents {
@@ -12,8 +29,38 @@
           align-items: flex-start;
 }
 
+@media only screen and (max-width: 1299px) {
+  .project .contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .project .contents {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
 .project .contents .text {
   width: 50%;
+}
+
+@media only screen and (max-width: 1299px) {
+  .project .contents .text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .project .contents .text {
+    width: 50%;
+  }
 }
 
 .project i, .project .icon {
@@ -63,6 +110,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 45px;
 }
 
@@ -75,25 +124,87 @@
 }
 
 .devices {
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   position: relative;
   height: 100%;
 }
 
-.devices .phone {
-  color: white;
-  display: inline;
-  position: absolute;
-  bottom: -6px;
-  left: 95px;
-  z-index: 2;
+@media only screen and (max-width: 1299px) {
+  .devices {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.devices .laptop {
-  color: red;
-  display: block;
-  position: relative;
-  float: right;
+@media only screen and (min-width: 1300px) {
+  .devices {
+    width: 50%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.devices .phone {
+  color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+  .devices .phone {
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    display: inline;
+    z-index: 2;
+    margin-right: -35px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .devices .phone {
+    margin-right: -55px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .devices .phone {
+    margin-right: -75px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .devices .phone {
+    margin-right: -90px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .devices .phone {
+    display: inline;
+    z-index: 2;
+    margin-right: -65px;
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .devices .laptop {
+    position: relative;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .devices .laptop {
+    display: block;
+    position: relative;
+    float: right;
+  }
 }
 
 .deviceImage {
@@ -148,5 +259,13 @@
 .github-button:hover {
   background-color: #3a3a3a;
   color: white;
+}
+
+@media only screen and (max-width: 1299px) {
+  .devices {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

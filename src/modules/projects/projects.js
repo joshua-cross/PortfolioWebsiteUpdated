@@ -28,11 +28,11 @@ class Projects extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.props.getProjects();
     }
 
-    componentDidUpdate() {
+    componentDidUpdate = () => {
 
     }
 

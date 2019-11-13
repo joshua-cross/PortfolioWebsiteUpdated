@@ -64,9 +64,26 @@
 }
 
 .project i, .project .icon {
-  font-size: 40px;
   color: #A45412;
   margin-right: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .project i, .project .icon {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project i, .project .icon {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .project i, .project .icon {
+    font-size: 40px;
+  }
 }
 
 .project i:last-of-type {
@@ -85,18 +102,75 @@
   margin-bottom: 5px;
 }
 
+@media only screen and (max-width: 767px) {
+  .project h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project h1 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .project h1 {
+    font-size: 56px;
+  }
+}
+
 .project h2 {
   font-family: "heebo";
   font-weight: 500;
-  font-size: 36px;
   letter-spacing: -0.7px;
-  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .project h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .project h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 }
 
 .project p {
-  font-size: 28px;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .project p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project p {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .project p {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 }
 
 .project p:last-of-type {
@@ -112,7 +186,27 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 767px) {
+  .technologies {
+    margin-bottom: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .technologies {
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .technologies {
+    margin-bottom: 45px;
+  }
 }
 
 .project:nth-child(even) {
@@ -132,6 +226,18 @@
           align-items: flex-end;
   position: relative;
   height: 100%;
+}
+
+@media only screen and (max-width: 1299px) {
+  .devices {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .devices {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 1299px) {
@@ -220,24 +326,59 @@
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  margin-right: 50px;
   font-family: heebo;
   letter-spacing: -0.5px;
   font-weight: 500;
-  font-size: 28px;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
 
+@media only screen and (max-width: 767px) {
+  .website-button, .github-button {
+    padding: 25px 35px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .website-button, .github-button {
+    padding: 25px 40px;
+    font-size: 22px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .website-button, .github-button {
+    padding: 25px 40px;
+    margin-right: 50px;
+    font-size: 28px;
+  }
+}
+
 .project-button {
-  margin-top: 80px;
   text-decoration: none;
 }
 
-.project-button:last-of-type {
-  margin-right: 0px;
+@media only screen and (max-width: 767px) {
+  .project-button {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project-button {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .project-button {
+    margin-top: 80px;
+  }
 }
 
 .website-button {
@@ -253,12 +394,34 @@
   background-color: transparent;
   border: 5px solid #3a3a3a;
   color: #3a3a3a;
-  padding: 20px 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .github-button {
+    padding: 20px 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .github-button {
+    padding: 20px 40px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .github-button {
+    padding: 20spx 40px;
+  }
 }
 
 .github-button:hover {
   background-color: #3a3a3a;
   color: white;
+}
+
+.buttonHolder a:last-of-type {
+  margin-right: 0px;
 }
 
 @media only screen and (max-width: 1299px) {

@@ -31,7 +31,15 @@
         } 
     }
     i, .icon {
-        font-size: 40px;
+        @media only screen and (max-width: 767px) {
+            font-size: 25px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 32px;
+        }
+        @media only screen and (min-width: 1026px) {
+            font-size: 40px;
+        }
         color: #A45412;
         margin-right: 5px;
     }
@@ -43,22 +51,53 @@
         margin: 0px;
     }
     h1 {
+        @media only screen and (max-width: 767px) {
+            font-size: 38px;
+            text-align: center;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 48px;
+        }
+        @media only screen and (min-width: 1026px) {
+            font-size: 56px;
+        }
         font-family: "standardTT";
         font-size: 56px;
         letter-spacing: -0.7px;
         margin-bottom: 5px;
     }
     h2 {
+        @media only screen and (max-width: 767px) {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        @media only screen and (min-width: 1026px) {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
         font-family: "heebo";
         font-weight: 500;
-        font-size: 36px;
         letter-spacing: -0.7px;
-        margin-bottom: 20px;
     }
     p {
-        font-size: 28px;
+        @media only screen and (max-width: 767px) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        @media only screen and (min-width: 1026px) {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        // font-size: 28px;
         letter-spacing: 1px;
-        margin-bottom: 20px;
     }
 
     p:last-of-type {
@@ -67,10 +106,19 @@
 }
 
 .technologies {
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 35px;
+    }
+    @media only screen and (min-width: 1026px) {
+        margin-bottom: 45px;
+    }
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 45px;
 }
 
 .project:nth-child(even) {
@@ -81,6 +129,12 @@
 }
 
 .devices {
+    @media only screen and (max-width: 1299px) {
+        margin-bottom: 30px;
+    }
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
     @media only screen and (max-width: 1299px) {
         width: 100%;
         justify-content: center;
@@ -148,14 +202,28 @@
 }
 
 .website-button, .github-button {
+    @media only screen and (max-width: 767px) {
+        padding: 25px 35px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 25px 40px;
+        font-size: 22px;
+        margin-right: 30px;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 25px 40px;
+        margin-right: 50px;
+        font-size: 28px;
+    }
     padding: 25px 40px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-    margin-right: 50px;
+    // margin-right: 50px;
     font-family: heebo;
     letter-spacing: -0.5px;
     font-weight: 500;
-    font-size: 28px;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease-in, color 0.2s ease-in;
@@ -163,12 +231,20 @@
 }
 
 .project-button {
-    margin-top: 80px;
+    @media only screen and (max-width: 767px) {
+        margin-top: 20px;
+    }
+    @media only screen and (min-width: 768px) {
+        margin-top: 50px;
+    }
+    @media only screen and (min-width: 1026px) {
+        margin-top: 80px;
+    }
     text-decoration: none;
 }
 
 .project-button:last-of-type {
-    margin-right: 0px;
+    // margin-right: 0px;
 }
 
 .website-button {
@@ -184,12 +260,28 @@
     background-color: transparent;
     border: 5px solid #3a3a3a;
     color: #3a3a3a;
-    padding: 20px 40px;
+    @media only screen and (max-width: 767px) {
+        padding: 20px 35px;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 20px 40px;
+        // font-size: 22px;
+        margin-right: 30px;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 20spx 40px;
+    }
 }
 
 .github-button:hover {
     background-color: #3a3a3a;
     color: white;
+}
+
+.buttonHolder {
+    a:last-of-type {
+        margin-right: 0px;
+    }
 }
 
 .devices {

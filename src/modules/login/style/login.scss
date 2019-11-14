@@ -1,5 +1,13 @@
 .login {
-    padding: 40px 60px;
+    @media only screen and (max-width: 767px) {
+        padding: 20px;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 40px;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 40px 60px;
+    }
 
     label {
         letter-spacing: -0.3px;
@@ -33,6 +41,12 @@
         padding: 10px 20px !important;
         letter-spacing: 1.5px;
         width: 400px;
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+        }
+        @media only screen and (min-width: 768px) {
+            width: 400px;
+        }
         box-sizing: border-box;
         margin-bottom: 20px;
     }
@@ -130,7 +144,16 @@
 }
 
 .imageUpload {
-    max-width: 30%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%
+    }
+    @media only screen and (min-width: 768px) {
+        max-width: 50%;
+    }
+    @media only screen and (min-width: 1026px) {
+        max-width: 30%;
+    }
+    // max-width: 30%;
     img {
         width: 100%;
     }

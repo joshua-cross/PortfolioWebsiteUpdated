@@ -1,5 +1,19 @@
-.login {
-  padding: 40px 60px;
+@media only screen and (max-width: 767px) {
+  .login {
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .login {
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .login {
+    padding: 40px 60px;
+  }
 }
 
 .login label {
@@ -37,6 +51,18 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .login input[type=text], .login input[type=password], .login textarea, .login select {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .login input[type=text], .login input[type=password], .login textarea, .login select {
+    width: 400px;
+  }
 }
 
 .login textarea {
@@ -136,8 +162,22 @@
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.imageUpload {
-  max-width: 30%;
+@media only screen and (max-width: 767px) {
+  .imageUpload {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .imageUpload {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .imageUpload {
+    max-width: 30%;
+  }
 }
 
 .imageUpload img {

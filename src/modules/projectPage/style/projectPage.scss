@@ -11,24 +11,53 @@ html, body {
         flex-wrap: wrap;
         // flex-direction: column;
         position: absolute;
-        margin-top: 70px;  
-        width: 100%;      
+        width: 100%;
+        @media only screen and (max-width: 767px) {
+            margin-top: 10px
+        }
+        @media only screen and (min-width: 768px) {
+            margin-top: 40px;
+        }
+        @media only screen and (min-width: 1026px) {
+            margin-top: 70px;  
+        }
     }
 
     .scroll-button {
         width: 100%;
         text-align: center;
-        margin-top: 15px;
+        @media only screen and (max-width: 767px) {
+            margin-top: 5px;
+        }
+        @media only screen and (min-width: 768px) {
+            margin-top: 10px;
+
+        }
+        @media only screen and (min-width: 1026px) {
+            margin-top: 15px;
+        }
         button {
-            width: 75px;
-            height: 75px;
+            @media only screen and (max-width: 767px) {
+                width: 30px;
+                height: 30px;
+                font-size: 22px;
+            }
+            @media only screen and (min-width: 768px) {
+                width: 50px;
+                height: 50px;
+                font-size: 30px;
+            }
+            @media only screen and (min-width: 1026px) {
+                width: 75px;
+                height: 75px;
+                font-size: 40px;
+            }
             border: none;
             border-radius: 50%;
             font-family: standardTT;
             background-color: #A45412;
             color: white;
             font-weight: 500;
-            font-size: 40px;
             box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
             cursor: pointer;
         }
@@ -36,16 +65,31 @@ html, body {
     .title {
         // display: inline-block;
         // top: 0px;
-        background-color: rgba(58,58,58, 0.25);
-        border: 3px solid #3a3a3a;
+        @media only screen and (max-width: 767px) {
+            max-width: 90%;
+            border: 1.5px solid #3a3a3a;
+        }
+        @media only screen and (min-width: 768px) {
+            max-width: 80%;
+            border: 3px solid #3a3a3a;
+        }
+        background-color: rgba(58,58,58, 0.5);
         box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         border-radius: 3px;
         padding: 10px 10px;
-        max-width: 80%;
         text-align: center;
         h1 {
+            @media only screen and (max-width: 767px) {
+                font-size: 30px
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 56px;
+            }
+            @media only screen and (min-width: 1026px) {
+                font-size: 100px;
+            }
             color: white;
-            font-size: 100px;
+            // font-size: 100px;
             text-transform: uppercase;
             margin: 0px;
             letter-spacing: -0.7px;
@@ -65,9 +109,27 @@ html, body {
 }
 
 .secondary-content {
-    padding: 60px 120px;
+    // padding: 60px 120px;
+    @media only screen and (max-width: 767px) {
+        padding: 15px 20px;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 30px 50px;
+    }
+    @media only screen and (min-width: 1300px) {
+        padding: 60px 120px;
+    }
     div {
-        margin-bottom: 50px;
+        // padding: 60px 120px;
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+        @media only screen and (min-width: 1300px) {
+            margin-bottom: 50px;
+        }
     }
     p, h2 {
         font-family: heebo;
@@ -76,11 +138,32 @@ html, body {
     }
     p {
         letter-spacing: 1px;
+        @media only screen and (max-width: 767px) {
+            font-size: 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 24px;
+        }
+        @media only screen and (min-width: 1300px) {
+            font-size: 28px;
+        }
     }
     h2 {
         letter-spacing: -0.7px;
         font-weight: 500;
         margin-bottom: 20px;
+        @media only screen and (max-width: 767px) {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        @media only screen and (min-width: 1300px) {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
     }
     
 }
@@ -89,9 +172,24 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    @media only screen and (max-width: 767px) {
+        flex-flow: column;
+    }
+    // flex-wrap: wrap;
     margin-bottom: 0px;
     .secondary-image {
-        width: 30%;  
+        @media only screen and (max-width: 767px) {
+            width: 100%;  
+        }
+        @media only screen and (min-width: 768px) {
+            width: 48%;
+        }
+        @media only screen and (min-width: 1300px) {
+            width: 30%;  
+        }
         img {
             width: 100%;
             border-radius: 10px;

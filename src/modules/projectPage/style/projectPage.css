@@ -17,50 +17,134 @@ html, body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: absolute;
-  margin-top: 70px;
   width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .background .title-holder {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background .title-holder {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .background .title-holder {
+    margin-top: 70px;
+  }
 }
 
 .background .scroll-button {
   width: 100%;
   text-align: center;
-  margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .background .scroll-button {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background .scroll-button {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .background .scroll-button {
+    margin-top: 15px;
+  }
 }
 
 .background .scroll-button button {
-  width: 75px;
-  height: 75px;
   border: none;
   border-radius: 50%;
   font-family: standardTT;
   background-color: #A45412;
   color: white;
   font-weight: 500;
-  font-size: 40px;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+  .background .scroll-button button {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background .scroll-button button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .background .scroll-button button {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+}
+
 .background .title {
-  background-color: rgba(58, 58, 58, 0.25);
-  border: 3px solid #3a3a3a;
+  background-color: rgba(58, 58, 58, 0.5);
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 10px 10px;
-  max-width: 80%;
   text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .background .title {
+    max-width: 90%;
+    border: 1.5px solid #3a3a3a;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background .title {
+    max-width: 80%;
+    border: 3px solid #3a3a3a;
+  }
 }
 
 .background .title h1 {
   color: white;
-  font-size: 100px;
   text-transform: uppercase;
   margin: 0px;
   letter-spacing: -0.7px;
   font-family: standardTT;
   text-shadow: 3px 3px 2px #3a3a3a;
+}
+
+@media only screen and (max-width: 767px) {
+  .background .title h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background .title h1 {
+    font-size: 56px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .background .title h1 {
+    font-size: 100px;
+  }
 }
 
 .background video {
@@ -71,12 +155,40 @@ html, body {
   width: 100%;
 }
 
-.secondary-content {
-  padding: 60px 120px;
+@media only screen and (max-width: 767px) {
+  .secondary-content {
+    padding: 15px 20px;
+  }
 }
 
-.secondary-content div {
-  margin-bottom: 50px;
+@media only screen and (min-width: 768px) {
+  .secondary-content {
+    padding: 30px 50px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .secondary-content {
+    padding: 60px 120px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-content div {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-content div {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .secondary-content div {
+    margin-bottom: 50px;
+  }
 }
 
 .secondary-content p, .secondary-content h2 {
@@ -89,10 +201,49 @@ html, body {
   letter-spacing: 1px;
 }
 
+@media only screen and (max-width: 767px) {
+  .secondary-content p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-content p {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .secondary-content p {
+    font-size: 28px;
+  }
+}
+
 .secondary-content h2 {
   letter-spacing: -0.7px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-content h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-content h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .secondary-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 }
 
 .image-holder {
@@ -104,11 +255,37 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   margin-bottom: 0px;
 }
 
-.image-holder .secondary-image {
-  width: 30%;
+@media only screen and (max-width: 767px) {
+  .image-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image-holder .secondary-image {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .image-holder .secondary-image {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .image-holder .secondary-image {
+    width: 30%;
+  }
 }
 
 .image-holder .secondary-image img {

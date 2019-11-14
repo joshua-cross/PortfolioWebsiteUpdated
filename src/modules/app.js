@@ -7,6 +7,7 @@ import Intro from './Introduction/intro';
 import Projects from './projects/projects';
 import PrimaryForm from './addProjects/primaryForm';
 import SecondaryForm from './addProjects/secondaryForm';
+import NavDetector from './navDetector';
 
 import fashionify1 from './resources/fashionify-desktop.png';
 import fashionify2 from './resources/fashionify-mobile.png';
@@ -93,14 +94,16 @@ const homePage = () => {
     return (
         <div className = "container">
             <Bar />
-            <Intro />
-            <Projects
-                projects = {projects}
-            />
-            <SecondaryProjects
-                projects = {secondaryProjects}
-            />
-            <Footer />
+            <NavDetector>
+                <Intro />
+                <Projects
+                    projects = {projects}
+                />
+                <SecondaryProjects
+                    projects = {secondaryProjects}
+                />
+                <Footer />
+            </NavDetector>
         </div>
     ); 
 }
@@ -109,10 +112,13 @@ const project = (props) => {
     return (
         <div className = "container">
             <Bar />
-            <ProjectPage
-                id = {props.match.params.id}
-            />
-            <Footer />
+            <NavDetector>
+                <ProjectPage
+                    id = {props.match.params.id}
+                />
+                <Footer />
+            </NavDetector>
+            
         </div>
     )
 }
@@ -121,10 +127,12 @@ const addPrimary = () => {
     return (
         <div className = "container">
             <Bar />
-            <PrimaryForm
-                editing = {false}
-            />
-            <Footer />
+            <NavDetector>
+                <PrimaryForm
+                    editing = {false}
+                />
+                <Footer />
+            </NavDetector>
         </div>
     )
 }
@@ -134,11 +142,13 @@ const editPrimary = (props) => {
     return (
         <div className = "container">
             <Bar />
-            <PrimaryForm
-                id = {props.match.params.id}
-                editing = {true}
-            />
-            <Footer/>
+            <NavDetector>
+                <PrimaryForm
+                    id = {props.match.params.id}
+                    editing = {true}
+                />
+                <Footer/>
+            </NavDetector>
         </div>
     )
 }
@@ -147,8 +157,10 @@ const addSecondary = () => {
     return (
         <div className = "container">
             <Bar />
-            <SecondaryForm/>
-            <Footer />
+            <NavDetector>
+                <SecondaryForm/>
+                <Footer />
+            </NavDetector>
         </div>
     )
 }
@@ -157,11 +169,13 @@ const editSecondary = (props) => {
     return (
         <div className = "container">
             <Bar />
-            <SecondaryForm
-                id = {props.match.params.id}
-                editing = {true}
-            />
-            <Footer />
+            <NavDetector>
+                <SecondaryForm
+                    id = {props.match.params.id}
+                    editing = {true}
+                />
+                <Footer />
+            </NavDetector>
         </div>
     )
 }
@@ -170,8 +184,10 @@ const login = () => {
     return (
         <div className = "container">
             <Bar />
-            <Login />
-            <Footer />
+            <NavDetector>
+                <Login />
+                <Footer />
+            </NavDetector>
         </div>
     )
 }
@@ -188,8 +204,14 @@ class App extends React.Component {
 
     }
 
-    componenDidMount() {
+    componenDidMount = () => {
+        console.log("App has loaded");
+        window.addEventListener('scroll', this.scrolling);
+        this.scrolling();
+    }
 
+    scrolling = () => {
+        console.log("header height: " + document.getElementById('someDiv').offsetHeight + "px");
     }
 
     componentDidUpdate() {

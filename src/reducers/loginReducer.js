@@ -1,4 +1,4 @@
-export default (state = "access granted", action) => {
+export default (state = "", action) => {
     switch(action.type) {
         case "LOGIN":
             console.log("setting login to: " + action.payload);

@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom';
 class Links extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            header: this.props.header
+        }
     }
 
     componentDidMount() {
@@ -15,13 +18,21 @@ class Links extends React.Component {
 
     }
 
+    componentWillReceiveProps = (nextProps) => {
+        if(nextProps.header) {
+            this.setState({
+                header: nextProps.header
+            })
+        }
+    }
+
     renderLinks = () => {
         var links;
 
         var add = ""
         var add2 = ""
 
-        if(this.props.status === "access granted") {
+        if(this.props.status === "access granted" && this.state.header === "full") {
             add = (
                 <div>
                     <Link to = "/addprimary">Add Primary</Link>

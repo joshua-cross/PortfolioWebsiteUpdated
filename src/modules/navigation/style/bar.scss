@@ -1,9 +1,5 @@
-.nav {
-    display: flex;
-    border-bottom: 1px solid #3A3A3A;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    max-width: 100%;
-    
+.full {
+    // background-color: pink;
     @media only screen and (max-width: 767px) {
         flex-direction: column;
         justify-content: center;
@@ -15,7 +11,7 @@
         // flex-wrap: nowrap;
     }
     @media only screen and (min-width: 768px) {
-        background-color: white;
+        // background-color: white;
         width: 100%;
         padding: 20px 30px;
         flex-direction: row;
@@ -26,6 +22,46 @@
     @media only screen and (min-width: 1026px) {
         padding: 40px 60px;
     }
+
+}
+
+.minimized {
+    // background-color: red;;
+    @media only screen and (max-width: 767px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px;
+        // flex-wrap: nowrap;
+    }
+    @media only screen and (min-width: 768px) {
+        // background-color: white;
+        width: 100%;
+        padding: 10px 30px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 10px 60px;
+    }
+    
+}
+
+
+.nav {
+    z-index: 100;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    border-bottom: 1px solid #3A3A3A;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 100%;
+    transition: max-height 0.5s ease-out;
 }
 
 .links {

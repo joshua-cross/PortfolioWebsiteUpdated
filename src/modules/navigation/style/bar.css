@@ -1,15 +1,5 @@
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid #3A3A3A;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  max-width: 100%;
-}
-
 @media only screen and (max-width: 767px) {
-  .nav {
+  .full {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -27,8 +17,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .nav {
-    background-color: white;
+  .full {
     width: 100%;
     padding: 20px 30px;
     -webkit-box-orient: horizontal;
@@ -47,9 +36,67 @@
 }
 
 @media only screen and (min-width: 1026px) {
-  .nav {
+  .full {
     padding: 40px 60px;
   }
+}
+
+@media only screen and (max-width: 767px) {
+  .minimized {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .minimized {
+    width: 100%;
+    padding: 10px 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .minimized {
+    padding: 10px 60px;
+  }
+}
+
+.nav {
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #3A3A3A;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 100%;
+  -webkit-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 .links {

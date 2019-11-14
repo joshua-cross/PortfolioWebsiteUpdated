@@ -1,29 +1,74 @@
-.secondary-projects {
-  padding: 90px 120px;
-}
-
 .secondary-projects h1 {
   font-family: "standardTT";
-  font-size: 56px;
   letter-spacing: -0.7px;
   margin: 0px;
   margin-bottom: 5px;
   padding: 0px;
 }
 
+@media only screen and (max-width: 767px) {
+  .secondary-projects h1 {
+    font-size: 38px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects h1 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .secondary-projects h1 {
+    font-size: 56px;
+  }
+}
+
 .secondary-projects h2 {
   font-family: heebo;
   font-weight: 500;
   letter-spacing: -0.7px;
-  color: #3a3a3a;
-  margin-top: 20px;
-  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-projects h2 {
+    margin: 0px;
+    font-size: 26px;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+    font-size: 36px;
+  }
 }
 
 .secondary-projects p {
   margin: 0px;
   letter-spacing: 1.5px;
-  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-projects p {
+    color: white;
+    font-size: 14px;
+    max-lines: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects p {
+    color: #3a3a3a;
+    font-size: 18px;
+  }
 }
 
 .secondary-projects .secondary-project-holder {
@@ -40,27 +85,118 @@
       flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 767px) {
+  .secondary-projects .secondary-project-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects .secondary-project-holder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .secondary-projects .secondary-project {
-  width: 30%;
-  margin-bottom: 60px;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-projects .secondary-project {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects .secondary-project {
+    width: 45%;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .secondary-projects .secondary-project {
+    width: 30%;
+  }
 }
 
 .secondary-projects .secondary-project .secondary-project-image {
-  border-radius: 10px;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 
+@media only screen and (min-width: 768px) {
+  .secondary-projects .secondary-project .secondary-project-image {
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
 .secondary-projects .secondary-project .secondary-project-image img {
-  width: 105%;
   -webkit-filter: blur(4px);
           filter: blur(4px);
   margin: -7.5px;
 }
 
-.read-more-holder {
-  margin-top: 25px;
+@media only screen and (max-width: 767px) {
+  .secondary-projects .secondary-project .secondary-project-image img {
+    width: 130%;
+    display: block;
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects .secondary-project .secondary-project-image img {
+    width: 105%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-projects .secondary-project .secondary-project-details {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0px;
+    background-color: rgba(58, 58, 58, 0.5);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .secondary-projects {
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-projects {
+    padding: 50px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .secondary-projects {
+    padding: 90px 120px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .read-more-holder {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .read-more-holder {
+    margin-top: 25px;
+  }
 }
 
 .read-more {
@@ -68,11 +204,26 @@
   font-family: "standardTT";
   letter-spacing: 0.83px;
   text-transform: capitalize;
-  font-size: 20px;
-  padding-top: 20px;
-  color: #A45412;
   -webkit-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  .read-more {
+    color: #D7A67D;
+    font-size: 14px;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .read-more {
+    font-size: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-top: 20px;
+    color: #A45412;
+  }
 }
 
 .read-more:hover {

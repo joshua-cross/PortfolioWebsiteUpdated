@@ -23,15 +23,17 @@ class SecondaryProjects extends React.Component {
                     <div className = "secondary-project-image">
                         <img src = {project.image} />
                     </div>
-                    <h2>
-                        {project.name}
-                    </h2>
-                    <p>
-                        {project.description}
-                    </p>
+                    <div className = "secondary-project-details">
+                        <h2>
+                            {project.name}
+                        </h2>
+                        <p>
+                            {project.description}
+                        </p>
 
-                    <div className = "read-more-holder">
-                        <Link className = "read-more" to = {`/project/${project.id}`}>read more</Link>
+                        <div className = "read-more-holder">
+                            <Link className = "read-more" to = {`/project/${project.id}`}>read more</Link>
+                        </div>
                     </div>
                 </div>
             )
@@ -69,15 +71,17 @@ class SecondaryProjects extends React.Component {
                         <div className = "secondary-project-image">
                             <img src = {imageURL} />
                         </div>
-                        <h2>
-                            {project.name}
-                        </h2>
-                        <p>
-                            {project.description}
-                        </p>
+                        <div className = "secondary-project-details">
+                            <h2>
+                                {project.name}
+                            </h2>
+                            <p>
+                                {project.description}
+                            </p>
 
-                        <div className = "read-more-holder">
-                            <Link className = "read-more" to = {`/project/${project.id}`}>read more</Link>
+                            <div className = "read-more-holder">
+                                <Link className = "read-more" to = {`/project/${project.id}`}>read more</Link>
+                            </div>
                         </div>
                     </div>
                 )

@@ -1,26 +1,54 @@
 .secondary-projects {
     h1 {
         font-family: "standardTT";
-        font-size: 56px;
         letter-spacing: -0.7px;
         margin: 0px;
         margin-bottom: 5px;
         padding: 0px;
+        @media only screen and (max-width: 767px) {
+            font-size: 38px;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 48px;
+        }
+        @media only screen and (min-width: 1026px) {
+            font-size: 56px;
+        }
     }
 
     h2 {
         font-family: heebo;
         font-weight: 500;
         letter-spacing: -0.7px;
-        color: #3a3a3a;
-        margin-top: 20px;
-        margin-bottom: 30px;
+        @media only screen and (max-width: 767px) {
+            margin: 0px;
+            font-size: 26px;
+            color: white;
+        }
+        @media only screen and (min-width: 768px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #3a3a3a;
+            font-size: 36px;
+        }
     }
 
     p {
         margin: 0px;
         letter-spacing: 1.5px;
-        font-size: 18px;
+        @media only screen and (max-width: 767px) {
+            color: white;
+            font-size: 14px;
+            max-lines: 2;
+        }
+        @media only screen and (min-width: 768px) {
+            color: #3a3a3a;
+            font-size: 18px;
+        }
     }
 
     .secondary-project-holder {
@@ -28,29 +56,80 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
+        @media only screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+        }
     }
 
     .secondary-project {
-        width: 30%;
-        margin-bottom: 60px;
+        position: relative;
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        @media only screen and (min-width: 768px) {
+            width: 45%;
+            margin-bottom: 60px;
+        }
+        @media only screen and (min-width: 1026px) {
+            width: 30%;        
+        }
+       
         .secondary-project-image {
-            border-radius: 10px;
-            box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            @media only screen and (min-width: 768px) {
+                border-radius: 10px;
+                box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            }
+        
             overflow: hidden;
             img {
-                width: 105%;
+                @media only screen and (max-width: 767px) {
+                    width: 130%;
+                    display: block;
+                    margin-left: -15%;
+                }
+                @media only screen and (min-width: 768px) {
+                    width: 105%;
+                }
+                // width: 105%;
                 filter: blur(4px);
                 margin: -7.5px;
+            }
+        }
+
+        .secondary-project-details {
+            @media only screen and (max-width: 767px) {
+                position: absolute;
+                width: 100%;
+                padding: 10px;
+                bottom: 0px;
+                background-color: rgba(58,58,58,0.5);
             }
         }
         
     }
 
-    padding: 90px 120px;
+    @media only screen and (max-width: 767px) {
+        padding: 0px;
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 50px;
+    }
+    @media only screen and (min-width: 1026px) {
+        padding: 90px 120px;
+    }
 }
 
 .read-more-holder {
-    margin-top: 25px;
+    @media only screen and (max-width: 767px) {
+        margin-top: 10px;
+    }
+    @media only screen and (min-width: 768px) {
+        margin-top: 25px;
+    }
 }
 
 .read-more {
@@ -58,10 +137,19 @@
     font-family: "standardTT";
     letter-spacing: 0.83px;
     text-transform: capitalize;
-    font-size: 20px;
-    padding-top: 20px;
-    color: #A45412;
     transition: color 0.2s ease-in;
+     @media only screen and (max-width: 767px) {
+        color: #D7A67D;
+        font-size: 14px;
+        margin: 0px;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 20px;
+        padding-top: 20px;
+        font-size: 20px;
+        padding-top: 20px;
+        color: #A45412;
+    }
 }
 
 .read-more:hover {

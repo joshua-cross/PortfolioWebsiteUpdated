@@ -216,3 +216,22 @@ export const deleteSecondaryProject = (id) => async (dispatch, getState) => {
         getSecondaryProjects();
     }
 }
+
+export const email = (email, subject, message) => async (dispatch, getState) => {
+    try {
+        const response = await test.post('email', {
+            email: email,
+            subject: subject,
+            message: message
+        });
+        if(response) {
+            console.log("email: ", response);
+            dispatch({
+                type: "SEND_EMAIL",
+                payload: response.data
+            })
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}

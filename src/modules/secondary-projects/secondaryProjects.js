@@ -57,7 +57,7 @@ class SecondaryProjects extends React.Component {
 
     renderSecondaryProjects = () => {
         if(this.props.secondaryProjects) {
-            const url = "http://portfolio2.test/images/";
+            const url = "https://josh-cross.com/portfolio2/images/";
             return this.props.secondaryProjects.map((project) => {
                 var printscreens = project.printscreens;
                 printscreens = printscreens.replace(/['"]+/g,'');

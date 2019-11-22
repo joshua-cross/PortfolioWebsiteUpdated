@@ -141,11 +141,21 @@ class Projects extends React.Component {
     //rendering the projects that we retrieved from the API.
     renderPrimaryProjects = () => {
         //the main URL (change when deploying.)
-        const url = "http://portfolio2.test/images/";
+        const url = "https://josh-cross.com/portfolio2/images/";
         return this.props.primaryProjects.map((project) => {
-            //getting the url for the images
-            var desktopImage = url + project.desktopImage;
-            var mobileImage = url + project.mobileImage;
+            //getting the url for the images if they exist.
+            if(project.mobileImage === "null" || project.mobileImage === null) {
+                var mobileImage = undefined;
+            } else {
+                var mobileImage = url + project.mobileImage;
+            }
+
+            if(project.desktopImage === "null" || project.desktopImage === null) {
+                var desktopImage = undefined
+            } else {
+                var desktopImage = url + project.desktopImage;
+                console.log("desktop image: " + desktopImage);
+            }
 
            //converting the tech string (seperated with commas) from the database to an array. 
             // var tech = project.tech.replace('\"', '');

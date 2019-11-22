@@ -212,7 +212,7 @@ class SecondaryProject extends React.Component {
                 </div>
             )
         } else if(this.props.id && this.props.secondaryProject.name) {
-            const url = "http://portfolio2.test/images/";
+            const url = "https://josh-cross.com/portfolio2/images/";
             const name = this.props.secondaryProject.name;
             const description = this.props.secondaryProject.description;
             const role = this.props.secondaryProject.role;

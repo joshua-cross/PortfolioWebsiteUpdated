@@ -60,10 +60,10 @@ class Devices extends React.Component {
         }
     }
 
-
-    render() {
-        return(
-            <div className = "devices">
+    //if there is a mobile device, render it.
+    renderMobileDevice = () => {
+        if(this.props.mobileImage) {
+            return (
                 <div className = "phone">
                     <MarvelDevices
                         deviceName = {"iphone6"}
@@ -77,6 +77,13 @@ class Devices extends React.Component {
                         </div>
                     </MarvelDevices>
                 </div> 
+            )
+        }
+    }
+
+    renderDesktopDevice = () => {
+        if(this.props.desktopImage) {
+            return (
                 <div className = "laptop">
                     <MarvelDevices
                         deviceName = {"macbook"}
@@ -89,6 +96,15 @@ class Devices extends React.Component {
                         </div>
                     </MarvelDevices>
                 </div>
+            )
+        }
+    }
+
+    render() {
+        return(
+            <div className = "devices">
+                {this.renderMobileDevice()}
+                {this.renderDesktopDevice()}                
             </div>
         );
     }

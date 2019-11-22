@@ -81,19 +81,23 @@ class Bar extends React.Component {
                     links = {[
                         {
                             name: "GitHub",
-                            hyperlink: "https://github.com/joshua-cross"
+                            hyperlink: "https://github.com/joshua-cross",
+                            type: "external"
                         },
                         {
                             name: "LinkedIn",
-                            hyperlink: "http://linkedin.com"
+                            hyperlink: "https://www.linkedin.com/in/josh-cross-043491a6",
+                            type: "external"
                         },
                         {
                             name: "Email",
-                            hyperlink: "http://youtube.com"
+                            hyperlink: "/email",
+                            type: "internal"
                         },
                         {
                             name: "CV",
-                            hyperlink: "http://youtube.com"
+                            hyperlink: "JoshuaCrossCV.pdf",
+                            type: "external"
                         }
                     ]}
                 />

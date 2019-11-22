@@ -47,11 +47,19 @@ class Links extends React.Component {
         }
 
         var links = this.props.links.map((link) => {
-            return (
-                <div>
-                    <a href = {link.hyperlink}>{link.name}</a>
-                </div>
-            );
+            if(link.type === "external") {
+                return (
+                    <div>
+                        <a href = {link.hyperlink}>{link.name}</a>
+                    </div>
+                );
+            } else {
+                return (
+                    <div>
+                        <Link to = {link.hyperlink}>{link.name}</Link>
+                    </div>
+                )
+            }
         })
 
         return <div>{add}{add2}{links}</div>

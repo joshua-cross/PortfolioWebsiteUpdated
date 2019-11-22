@@ -77,8 +77,8 @@ class BackgroundSelector extends React.Component {
     }
 
     renderUpload = () => {
-        const imageURL = "http://portfolio2.test/images/";
-        const videoURL = "http://portfolio2.test/videos/"
+        const imageURL = "https://josh-cross.com/portfolio2/images/";
+        const videoURL = "https://josh-cross.com/portfolio2/videos/"
         if(this.state.type === "image") {
             if(this.state.value) {
                 return (

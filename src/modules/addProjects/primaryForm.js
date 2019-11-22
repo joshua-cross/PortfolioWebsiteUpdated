@@ -191,7 +191,7 @@ class PrimaryForm extends React.Component {
             var tech = primaryProject.tech.split('"').join('');
             tech = tech.split(',');
             //the url the images are stored in.
-            const url = "http://portfolio2.test/images/";
+            const url = "https://josh-cross.com/portfolio2/images/";
             //getting the url for the images
             var desktopImage = url + primaryProject.desktopImage;
             var mobileImage = url + primaryProject.mobileImage;

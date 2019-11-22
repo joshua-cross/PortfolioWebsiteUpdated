@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: "http://portfolio2.test/api"
+    baseURL: "https://josh-cross.com/portfolio2/api"
 })

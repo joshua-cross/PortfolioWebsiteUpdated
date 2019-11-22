@@ -27,7 +27,7 @@ class ProjectPage extends React.Component {
             </div>
         )
         if(backgroundType === "video") {
-            const url = "http://portfolio2.test/videos/" + this.props.secondaryProject.background;
+            const url = "https://josh-cross.com/portfolio2/videos/" + this.props.secondaryProject.background;
             return(
                 <div className = "background">
                     {title}
@@ -39,7 +39,7 @@ class ProjectPage extends React.Component {
                 </div>
             )
         } else {
-            const url = "http://portfolio2.test/images/" + this.props.secondaryProject.background;
+            const url = "https://josh-cross.com/portfolio2/images/" + this.props.secondaryProject.background;
             return(
                 <div className = "background">
                     {title}
@@ -55,7 +55,7 @@ class ProjectPage extends React.Component {
         printscreens = printscreens.replace('[', '')
         printscreens = printscreens.replace(']', '')
         var images = printscreens.split(',');
-        const url = "http://portfolio2.test/images/";
+        const url = "https://josh-cross.com/portfolio2/images/";
         return images.map((image) => {
             const imageURL = url + image;
             return(

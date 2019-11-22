@@ -7,6 +7,7 @@ import Intro from './Introduction/intro';
 import Projects from './projects/projects';
 import PrimaryForm from './addProjects/primaryForm';
 import SecondaryForm from './addProjects/secondaryForm';
+import Email from './email/email';
 import NavDetector from './navDetector';
 
 import fashionify1 from './resources/fashionify-desktop.png';
@@ -192,6 +193,18 @@ const login = () => {
     )
 }
 
+const sendEmail = () => {
+    return (
+        <div className = "container">
+            <Bar />
+            <NavDetector>
+                <Email/>
+                <Footer/>
+            </NavDetector>
+        </div>
+    )
+}
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -233,6 +246,7 @@ class App extends React.Component {
                     <Route path = '/editprimary/:id' component = {editPrimary}/>
                     <Route path = '/editsecondary/:id' component = {editSecondary}/>
                     <Route path = "/login" component = {login} />
+                    <Route path = "/email" component = {sendEmail} />
                 </div>
             </BrowserRouter>
         )

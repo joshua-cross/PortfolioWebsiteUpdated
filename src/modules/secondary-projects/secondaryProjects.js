@@ -65,6 +65,10 @@ class SecondaryProjects extends React.Component {
                 printscreens = printscreens.replace(']', '')
                 var images = printscreens.split(',');
                 var imageURL = url + images[0];
+                var description = project.description
+                if(project.description.length > 100) {
+                    description = description.slice(0, 100) + "...";
+                }
                 return(
                     <div class = "secondary-project">
                         {this.renderAdminButtons(project.id)}
@@ -76,7 +80,7 @@ class SecondaryProjects extends React.Component {
                                 {project.name}
                             </h2>
                             <p>
-                                {project.description}
+                                {description}
                             </p>
 
                             <div className = "read-more-holder">
@@ -95,7 +99,7 @@ class SecondaryProjects extends React.Component {
             <div className = "secondary-projects">
                 <h1>Other Projects</h1>
                 <div className = "secondary-project-holder">
-                    {this.renderProjects()}
+                    {/* {this.renderProjects()} */}
                     {this.renderSecondaryProjects()}
                 </div>
             </div>

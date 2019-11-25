@@ -1,7 +1,8 @@
 import React from 'react';
 
 const currentTechnologies = [
-    "html", "css", "javascript", "sass", "react", "redux", "php", "node", "laravel"
+    "html", "css", "javascript", "sass", "react", "redux", "php", "node", "laravel", "java", "android", "gitlab", "github",
+    "mysql", "mongodb"
 ]
 
 class Tech extends React.Component {

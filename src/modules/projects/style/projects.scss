@@ -43,9 +43,9 @@
         color: #A45412;
         margin-right: 5px;
     }
-    i:last-of-type {
-        margin-right: 0px;
-    }
+    // i:last-of-type {
+    //     margin-right: 0px;
+    // }
     h1, h2, p {
         padding: 0px;
         margin: 0px;
@@ -126,6 +126,29 @@
 }
 .project:nth-child(odd) {
     background-color: #F3F3F3;
+}
+
+.devicesMobileOnly {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 100%;
+    @media only screen and (max-width: 1299px) {
+        margin-bottom: 30px;
+        order: -2;
+    }
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 1299px) {
+        width: 100%;
+        justify-content: center;
+        order: -2;
+    }
+    @media only screen and (min-width: 1300px) {
+        width: 50%;
+        justify-content: center;
+    }
 }
 
 .devices {

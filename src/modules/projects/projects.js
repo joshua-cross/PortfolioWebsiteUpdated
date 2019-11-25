@@ -12,7 +12,17 @@ import {getProjects, deletePrimaryProject} from '../../actions';
 
 // npm install --save-dev @iconify/react @iconify/icons-simple-icons
 import { Icon, InlineIcon } from '@iconify/react';
+
 import reduxIcon from '@iconify/icons-simple-icons/redux';
+import javaIcon from '@iconify/icons-simple-icons/java';
+import gitlabIcon from '@iconify/icons-simple-icons/gitlab';
+import githubIcon from '@iconify/icons-simple-icons/github';
+import mysqlIcon from '@iconify/icons-simple-icons/mysql';
+import mongoDBIcon from '@iconify/icons-simple-icons/mongodb';
+import androidStudio from '@iconify/icons-mdi/android-studio';
+// import cSharp from '@iconify/icons-logos/c-sharp';
+
+// npm install --save-dev @iconify/react @iconify/icons-logos
 
 // npm install --save-dev @iconify/react @iconify/icons-logos
 
@@ -58,6 +68,18 @@ class Projects extends React.Component {
                     return <i className = "fab fa-node"/>
                 } else if (tech === "laravel") {
                     return <i className = "fab fa-laravel"/>
+                } else if (tech === "java") {
+                    return <Icon color = "#A45412" className = "icon" icon = {javaIcon}/>
+                } else if (tech === "android") {
+                    return <Icon color = "#A45412" className = "icon" icon = {androidStudio}/>
+                } else if (tech === "gitlab") {
+                    return <Icon color = "#A45412" className = "icon" icon = {gitlabIcon}/>
+                } else if (tech === "github") {
+                    return <Icon color = "#A45412" className = "icon" icon = {githubIcon}/>
+                } else if (tech === "mysql") {
+                    return <Icon color = "#A45412" className = "icon" icon = {mysqlIcon}/>
+                } else if (tech === "mongodb") {
+                    return <Icon color = "#A45412" className = "icon" icon = {mongoDBIcon}/>
                 }
                 return(
                     <i className = {className}></i>
@@ -225,7 +247,7 @@ class Projects extends React.Component {
         return (
             <div className = "projects">
                 {this.redirect()}
-                {this.renderProjects()}
+                {/* {this.renderProjects()} */}
                 {this.renderPrimaryProjects()}
             </div>
         );

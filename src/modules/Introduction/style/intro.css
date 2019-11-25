@@ -22,6 +22,15 @@
 @media only screen and (min-width: 768px) {
   .intro {
     padding: 80px 45px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .intro {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -29,9 +38,13 @@
   }
 }
 
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 1300px) {
   .intro {
     padding: 150px 110px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -44,6 +57,12 @@
   .intro .text {
     margin-left: 0px;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .intro .text {
+    width: 75%;
   }
 }
 
@@ -70,7 +89,7 @@
   }
 }
 
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 1300px) {
   .intro .text h1 {
     font-size: 56px;
   }
@@ -99,7 +118,7 @@
   }
 }
 
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 1300px) {
   .intro .text h2 {
     font-size: 36px;
   }
@@ -123,10 +142,20 @@
   }
 }
 
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 1300px) {
   .intro .text h3 {
     font-size: 28px;
   }
+}
+
+.intro-tech {
+  display: inline-block;
+}
+
+.intro-tech span {
+  color: #DE0113;
+  letter-spacing: 0.75px;
+  font-weight: 500;
 }
 
 .image {
@@ -137,26 +166,34 @@
           box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 0px) {
   .image {
     width: 75%;
     margin-bottom: 40px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .image {
     width: 50%;
+    margin-bottom: 40px;
   }
 }
 
-@media screen and (min-width: 850px) {
+@media only screen and (min-width: 768px) {
   .image {
-    width: 25%;
+    width: 45%;
+    margin-bottom: 60px;
   }
 }
 
-@media only screen and (min-width: 1026px) {
+@media screen and (min-width: 1024px) {
+  .image {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
   .image {
     width: 20%;
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import Logo from './logo';
 import Links from './links';
@@ -23,7 +24,7 @@ class Bar extends React.Component {
     scrolling = () => {
         const scroll = window.pageYOffset
         console.log(window.pageYOffset)
-        if(scroll > 100) {
+        if(scroll > 10) {
             this.setState({
                 scrollPosition: scroll,
                 header: "minimized"
@@ -68,14 +69,16 @@ class Bar extends React.Component {
     render () {
         return (
             <div className = {`nav ${this.state.header}`}
-            onMouseEnter = {this.hovering}
-            onMouseLeave = {this.stoppedHovering}
-            onTouchStart = {this.touched}
-            id = "nav"
+                onMouseEnter = {this.hovering}
+                onMouseLeave = {this.stoppedHovering}
+                onTouchStart = {this.touched}
+                id = "nav"
             >
-                <Logo
-                    header = {this.state.header}    
-                />
+                <Link to = "/">
+                    <Logo
+                        header = {this.state.header}    
+                    />
+                </Link>
                 <Links
                     header = {this.state.header}
                     links = {[
